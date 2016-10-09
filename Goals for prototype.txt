@@ -1,0 +1,17 @@
+====================================
+SCOPE OF PROTOTYPE
+====================================
+
+Script car movement along a road
+Implement a single, basic scenario for the user to solve
+Have a basic scenery surrounding the vahicle
+Have a good fit for the camera in the demo car
+Implement a reticle that moves as the camera does
+
+====================================
+END GOALS
+====================================
+The user should be able to move the reticle to interact with a scenario
+The user should be able to interact with a drink in a cup holder
+The car should move along a path to trigger a situation
+The scenario should be solvable by the user
