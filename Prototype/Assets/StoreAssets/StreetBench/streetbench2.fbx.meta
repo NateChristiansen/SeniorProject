@@ -3,7 +3,15 @@ guid: 50d31de7174e1994fae4a37dc92c9815
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
+    100000: streetbench2
+    100002: //RootNode
+    400000: streetbench2
+    400002: //RootNode
+    2300000: streetbench2
+    3300000: streetbench2
     4300000: streetbench2
+    7400000: Default Take
+    11100000: //RootNode
   materials:
     importMaterials: 1
     materialName: 3

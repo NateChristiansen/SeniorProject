@@ -3,7 +3,12 @@ guid: b5e841a7fe08e3e4e9e90ddad39333b6
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
+    100000: //RootNode
+    400000: //RootNode
+    2300000: //RootNode
+    3300000: //RootNode
     4300000: electricity_pylon_top01_lod0
+    11100000: //RootNode
   materials:
     importMaterials: 0
     materialName: 0
