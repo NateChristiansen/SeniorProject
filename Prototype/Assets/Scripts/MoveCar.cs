@@ -2,16 +2,20 @@
 using System.Collections;
 
 public class MoveCar : MonoBehaviour {
-    public Transform target;
+
+    public BezierPath path;
     public float speed;
+    private float t = 0;
+
 	// Use this for initialization
 	void Start () {
 	
 	}
 	
 	// Update is called once per frame
-	void Update () {
-        float step = speed * Time.deltaTime;
-        transform.position = Vector3.MoveTowards(transform.position, target.position, step);
-	}
+	void Update ()
+    {
+        t += speed * Time.deltaTime;
+        transform.position = path.GetPositionByT(t);
+    }
 }
