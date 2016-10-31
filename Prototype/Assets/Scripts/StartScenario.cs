@@ -3,8 +3,10 @@ using System.Collections;
 
 public class StartScenario : MonoBehaviour {
 
-    GameObject vehicle;
-    bool playerAction = false;
+    public GameObject vehicle;
+    public bool playerAction = false;
+    double time = 1;
+    public bool playerfail = false;
     
 	// Use this for initialization
 	void Start () {
@@ -14,6 +16,15 @@ public class StartScenario : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-        if (Input.GetKey(KeyCode.RightArrow)) playerAction = true;
+        if (Input.GetKey(KeyCode.RightArrow))
+        {
+            enabled = false;
+        }
+        time -= Time.deltaTime;
+        if (time <= 0)
+        {
+            vehicle.GetComponent<MoveCar>().enabled = false;
+            enabled = false;
+        }
     }
 }
