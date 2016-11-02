@@ -10,8 +10,8 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: com.test.jake
-  productName: test
+  companyName: com.newTest.VRProject
+  productName: newTest
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenStyle: 0
@@ -94,7 +94,7 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
-  bundleIdentifier: com.test.jake
+  bundleIdentifier: com.newTest.jake
   bundleVersion: 1.0
   preloadedAssets: []
   metroEnableIndependentInputSource: 0
