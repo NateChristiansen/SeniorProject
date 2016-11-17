@@ -1,31 +1,44 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using System.Collections;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Menu_StartGame : MonoBehaviour, IGvrGazeResponder {
-
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
-
-    public void OnGazeEnter()
+namespace Assets.Scripts
+{
+    public class Menu_StartGame : MonoBehaviour, IGvrGazeResponder
     {
+        private AsyncOperation async;
+        // Use this for initialization
+        void Start ()
+        {
+            StartCoroutine(Load());
+        }
+	
+        // Update is called once per frame
+        void Update () {
+	
+        }
+
+        IEnumerator Load()
+        {
+            async = SceneManager.LoadSceneAsync("mainScene");
+            async.allowSceneActivation = false;
+            yield return async;
+        }
+
+        public void OnGazeEnter()
+        {
         
-    }
+        }
 
-    public void OnGazeExit()
-    {
+        public void OnGazeExit()
+        {
         
-    }
+        }
 
-    public void OnGazeTrigger()
-    {
-        SceneManager.LoadScene("test");
+        public void OnGazeTrigger()
+        {
+            if (async != null)
+                async.allowSceneActivation = true;
+        }
     }
 }
