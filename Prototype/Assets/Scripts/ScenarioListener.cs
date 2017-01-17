@@ -19,6 +19,7 @@ public class ScenarioListener : MonoBehaviour {
             stop.BadChoiceText = BadChoiceText;
             stop.DefaultChoiceText = DefaultChoiceText;
             stop.Timer = Time;
+            stop.ScenarioIdentifier = "StopSignScenarioTrigger";
         }
     }
 

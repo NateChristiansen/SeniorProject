@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class GoodSelectionHandler : MonoBehaviour, IGvrGazeResponder {
+public class GoodSelectionHandler : AbstractScenarioHandler, IGvrGazeResponder {
 
 	// Use this for initialization
 	void Start () {
@@ -28,14 +28,5 @@ public class GoodSelectionHandler : MonoBehaviour, IGvrGazeResponder {
         GameObject.Find("Vehicle").gameObject.GetComponent<StopSignScenario>().SetSelectionResult("good");
         GameObject.Find("Vehicle").gameObject.GetComponent<StopSignScenario>().SetSelectionMade(true);
         ColorChoice();
-    }
-
-    void ColorChoice()
-    {
-        foreach (Transform child in GameObject.Find("ScenarioMenu").transform)
-        {
-            child.gameObject.GetComponent<Renderer>().material.color = Color.white;
-        }
-        this.GetComponent<Renderer>().material.color = Color.yellow;
     }
 }
