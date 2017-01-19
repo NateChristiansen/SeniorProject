@@ -2678,7 +2678,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!23 &124539023
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -15194,7 +15194,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 568348336}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d58fa0575380fb5499da66da8ab4847b, type: 3}
   m_Name: 
@@ -20150,7 +20150,7 @@ Transform:
   m_PrefabParentObject: {fileID: 461028, guid: 51a7c2043e094b043851f4e8e3d17ad2, type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 742561310}
-  m_LocalRotation: {x: 0.53267515, y: 0.07034045, z: 0.83613265, w: -0.11041513}
+  m_LocalRotation: {x: 0.5326752, y: 0.070340455, z: 0.83613276, w: -0.110415146}
   m_LocalPosition: {x: 0.000022271464, y: -0.00006150465, z: 0.026027026}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -31114,8 +31114,8 @@ MonoBehaviour:
   defaultLookXPos: -0.36
   maxLookRight: 1.5
   maxLookLeft: -1.5
-  minLookSpeed: 5
-  maxLookSpeed: 5
+  minLookSpeed: 4
+  maxLookSpeed: 4
   ikActive: 1
   steeringWheelRotation: 0
   steeringWheelRotationTwoTargets: 85
@@ -31149,7 +31149,7 @@ MonoBehaviour:
   rightFootGas: {fileID: 595682965}
   mobile: 0
   defaultSteering: {x: 0, y: 0, z: 0}
-  steeringRotationSpeed: 0.25
+  steeringRotationSpeed: 0.2
   steeringTargets: 1
   wheelShake: 1
   wheelCollider: {fileID: 541829179}
@@ -37314,7 +37314,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1290386300
 Transform:
   m_ObjectHideFlags: 0
@@ -51072,7 +51072,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1885184286
 Transform:
   m_ObjectHideFlags: 0

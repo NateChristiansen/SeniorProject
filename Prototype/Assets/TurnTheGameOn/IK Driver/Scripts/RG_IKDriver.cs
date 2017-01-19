@@ -88,8 +88,10 @@ public class RG_IKDriver : MonoBehaviour {
 		lookTargetPosX = defaultLookXPos;
 		TargetShifter ();
 		if (gearText == null) {
-			gearText = GameObject.Find ("Gear Text").GetComponent<Text>();
+			//gearText = GameObject.Find ("Gear Text").GetComponent<Text>();
 		}
+	    //var x = new HumanPoseHandler(animator.avatar, animator.GetBoneTransform(HumanBodyBones.Jaw));
+        //x.GetHumanPose();
 	}
 
 	void Update(){
@@ -226,18 +228,18 @@ public class RG_IKDriver : MonoBehaviour {
 					} else {
 						horizontalInput = Input.GetAxis ("Horizontal");
 						verticalInput = Input.GetAxis ("Vertical");
-						//currentHorizontal = Mathf.MoveTowards (currentHorizontal, horizontalInput, Time.deltaTime * 1);
+						currentHorizontal = Mathf.MoveTowards (currentHorizontal, horizontalInput, Time.deltaTime * 1);
 						if (horizontalInput > 0) {
 							if (steeringTargets == SteeringTargets.All) {
 								if (horizontalInput >= 1) {
-									rightHandObj = steeringNW;
-									leftHandObj = steeringSE;
+									rightHandObj = steeringSW;
+									leftHandObj = steeringNE;
 								} else if (horizontalInput >= 0.5f) {							
-									rightHandObj = steeringN;
-									leftHandObj = steeringS;
+									rightHandObj = steeringS;
+									leftHandObj = steeringN;
 								} else {
-									rightHandObj = steeringNE;
-									leftHandObj = steeringSW;
+									rightHandObj = steeringSE;
+									leftHandObj = steeringNW;
 								}
 							}else if(steeringTargets == SteeringTargets.Two){
 								rightHandObj = steeringE;
@@ -248,14 +250,14 @@ public class RG_IKDriver : MonoBehaviour {
 						} else if (horizontalInput < 0) {
 							if (steeringTargets == SteeringTargets.All) {
 								if (horizontalInput <= -1) {
-									rightHandObj = steeringSW;
-									leftHandObj = steeringNE;
+									rightHandObj = steeringNW;
+									leftHandObj = steeringSE;
 								} else if (horizontalInput <= -0.5f) {
-									rightHandObj = steeringS;
-									leftHandObj = steeringN;
+									rightHandObj = steeringN;
+									leftHandObj = steeringS;
 								} else {
-									rightHandObj = steeringSE;
-									leftHandObj = steeringNW;
+									rightHandObj = steeringNE;
+									leftHandObj = steeringSW;
 								}
 							}else if(steeringTargets == SteeringTargets.Two){
 								rightHandObj = steeringE;

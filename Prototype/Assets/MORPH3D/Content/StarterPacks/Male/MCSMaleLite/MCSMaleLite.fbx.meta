@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 9f9ed3a07debaed4b860aeb0cf301474
-timeCreated: 1462562622
+timeCreated: 1484835677
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
@@ -95,6 +95,10 @@ ModelImporter:
     100174: tongueBase
     100176: tongueTip
     100178: upperJaw
+    100180: G2FSimplifiedEyes
+    100182: Genesis 2 Male
+    100184: lHandAttachmentPointL
+    100186: rHandAttachmentPointR
     400000: abdomen
     400002: abdomen2
     400004: chest
@@ -185,6 +189,10 @@ ModelImporter:
     400174: tongueBase
     400176: tongueTip
     400178: upperJaw
+    400180: G2FSimplifiedEyes
+    400182: Genesis 2 Male
+    400184: lHandAttachmentPointL
+    400186: rHandAttachmentPointR
     4300000: Genesis2Male.Shape_LOD0
     4300002: Genesis2Male.Shape_LOD1
     4300004: Genesis2Male.Shape_LOD2
@@ -194,6 +202,24 @@ ModelImporter:
     4300012: G2FSimplifiedEyes_394.Shape_LOD0
     4300014: G2FSimplifiedEyes_394.Shape_LOD1
     9500000: //RootNode
+    11400000: G2FSimplifiedEyes
+    11400002: G2FSimplifiedEyes_394.Shape_LOD0
+    11400004: G2FSimplifiedEyes_394.Shape_LOD1
+    11400006: Genesis 2 Male
+    11400008: Genesis 2 Male
+    11400010: Genesis2Male.Shape_LOD0
+    11400012: Genesis2Male.Shape_LOD1
+    11400014: Genesis2Male.Shape_LOD2
+    11400016: Genesis2Male.Shape_LOD3
+    11400018: Genesis2Male.Shape_LOD4
+    11400020: Genesis2Male.Shape_LOD5
+    11400022: hip
+    11400024: hip
+    11400026: lHandAttachmentPointL
+    11400028: lHandAttachmentPointL
+    11400030: //RootNode
+    11400032: rHandAttachmentPointR
+    11400034: rHandAttachmentPointR
     13700000: G2FSimplifiedEyes_394.Shape_LOD0
     13700002: G2FSimplifiedEyes_394.Shape_LOD1
     13700004: Genesis2Male.Shape_LOD0
@@ -210,7 +236,7 @@ ModelImporter:
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
-    resampleRotations: 1
+    resampleCurves: 1
     optimizeGameObjects: 0
     motionNodeName: 
     animationImportErrors: 
@@ -434,14 +460,6 @@ ModelImporter:
         modified: 0
     - boneName: rEye
       humanName: RightEye
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: lowerJaw
-      humanName: Jaw
       limit:
         min: {x: 0, y: 0, z: 0}
         max: {x: 0, y: 0, z: 0}

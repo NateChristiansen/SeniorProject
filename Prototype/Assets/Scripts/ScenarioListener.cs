@@ -21,6 +21,15 @@ public class ScenarioListener : MonoBehaviour {
             stop.Timer = Time;
             stop.ScenarioIdentifier = "StopSignScenarioTrigger";
         }
+        if (col.gameObject.name == "PassengerScenarioTrigger")
+        {
+            var stop = gameObject.AddComponent<PassengerScenario>();
+            stop.GoodChoiceText = GoodChoiceText;
+            stop.BadChoiceText = BadChoiceText;
+            stop.DefaultChoiceText = DefaultChoiceText;
+            stop.Timer = Time;
+            stop.ScenarioIdentifier = "StopSignScenarioTrigger";
+        }
     }
 
 	// Use this for initialization
