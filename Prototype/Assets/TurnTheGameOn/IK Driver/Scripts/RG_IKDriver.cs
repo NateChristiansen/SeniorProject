@@ -228,13 +228,14 @@ public class RG_IKDriver : MonoBehaviour {
 					} else {
 						horizontalInput = Input.GetAxis ("Horizontal");
 						verticalInput = Input.GetAxis ("Vertical");
+                        Debug.Log(horizontalInput);
 						currentHorizontal = Mathf.MoveTowards (currentHorizontal, horizontalInput, Time.deltaTime * 1);
 						if (horizontalInput > 0) {
 							if (steeringTargets == SteeringTargets.All) {
-								if (horizontalInput >= 1) {
+								/*if (horizontalInput >= 1) {
 									rightHandObj = steeringSW;
 									leftHandObj = steeringNE;
-								} else if (horizontalInput >= 0.5f) {							
+								} else*/ if (horizontalInput >= 0.5f) {							
 									rightHandObj = steeringS;
 									leftHandObj = steeringN;
 								} else {
@@ -249,10 +250,10 @@ public class RG_IKDriver : MonoBehaviour {
 							lookObjMoveSpeed = minLookSpeed;
 						} else if (horizontalInput < 0) {
 							if (steeringTargets == SteeringTargets.All) {
-								if (horizontalInput <= -1) {
+								/*if (horizontalInput <= -1) {
 									rightHandObj = steeringNW;
 									leftHandObj = steeringSE;
-								} else if (horizontalInput <= -0.5f) {
+								} else*/ if (horizontalInput <= -0.5f) {
 									rightHandObj = steeringN;
 									leftHandObj = steeringS;
 								} else {
