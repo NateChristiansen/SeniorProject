@@ -286,7 +286,7 @@ public class RG_IKDriver : MonoBehaviour
                      * verticalInput = Input.GetAxis("Vertical");
                     */
                     if (Math.Abs(horizontalInput) > 0)
-                        Debug.Log(horizontalInput);
+                        //Debug.Log(horizontalInput);
                     currentHorizontal = Mathf.MoveTowards(currentHorizontal, horizontalInput, Time.deltaTime*1);
                     if (horizontalInput > 0)
                     {

@@ -3,8 +3,6 @@ using System.Collections;
 
 public class AbstractScenarioHandler : MonoBehaviour, IScenarioSelectionHandler
 {
-    protected string CallerClassName;
-
 	// Use this for initialization
 	void Start () {
 	
@@ -22,11 +20,6 @@ public class AbstractScenarioHandler : MonoBehaviour, IScenarioSelectionHandler
             child.gameObject.GetComponent<Renderer>().material.color = Color.white;
         }
         this.GetComponent<Renderer>().material.color = Color.yellow;
-    }
-
-    public void SetCallerClass(string name)
-    {
-        CallerClassName = name;
     }
 
 }

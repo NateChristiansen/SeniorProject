@@ -25,8 +25,9 @@ public class GoodSelectionHandler : AbstractScenarioHandler, IGvrGazeResponder {
 
     public void OnGazeTrigger()
     {
-        GameObject.Find("Vehicle").gameObject.GetComponent<AbstractScenario>().SetSelectionResult("good");
-        GameObject.Find("Vehicle").gameObject.GetComponent<AbstractScenario>().SetSelectionMade(true);
+        string s = GameObject.Find("Vehicle").gameObject.GetComponent<ScenarioListener>().GetTriggerName();
+        GameObject.Find(s).gameObject.GetComponent<AbstractScenario>().SetSelectionResult("good");
+        GameObject.Find(s).gameObject.GetComponent<AbstractScenario>().SetSelectionMade(true);
         ColorChoice();
     }
 }
