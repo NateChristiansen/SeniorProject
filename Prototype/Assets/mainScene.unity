@@ -2679,7 +2679,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!23 &124539023
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2767,10 +2767,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae767f06be58c2d4ca65119e3645d71e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GoodChoiceText: Good
-  BadChoiceText: Bad
-  DefaultChoiceText: OK
-  Time: 7
+  GoodChoiceText: Yell STOP!
+  BadChoiceText: Keep going
+  DefaultChoiceText: (say nothing)
+  Time: 6
 --- !u!1001 &127682370
 Prefab:
   m_ObjectHideFlags: 0
@@ -36207,10 +36207,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bdae257049342540958c650d54005d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GoodChoiceText: Nope
-  BadChoiceText: JK
-  DefaultChoiceText: Bad
-  Time: 7
+  GoodChoiceText: Nice
+  BadChoiceText: Not Nice
+  DefaultChoiceText: Maybe
+  Time: 6
 --- !u!54 &1218407015
 Rigidbody:
   m_ObjectHideFlags: 0
