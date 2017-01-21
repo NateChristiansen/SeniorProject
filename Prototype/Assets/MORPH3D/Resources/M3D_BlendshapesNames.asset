@@ -11,6 +11,9 @@ MonoBehaviour:
   m_Script: {fileID: -1875576402, guid: 5f3eea9b8727c46938cdf6b120ebffd8, type: 3}
   m_Name: M3D_BlendshapesNames
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
+  namesTable: []
+=======
   namesTable:
   - _dazName: Genesis2Male__PBMAdamsApple
     _ID: PBMAdamsApple
@@ -234,3 +237,4 @@ MonoBehaviour:
   - _dazName: Genesis2Male__Youth_Weight
     _ID: Youth_Weight
     Label: Youth _ Weight
+>>>>>>> 2e82e10addd341cf7f67d19a991096682598390a
