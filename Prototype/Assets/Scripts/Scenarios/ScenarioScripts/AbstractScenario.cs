@@ -1,6 +1,9 @@
 ﻿using System;
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using Random = System.Random;
 
 public abstract class AbstractScenario : MonoBehaviour, IScenario {
 
@@ -8,7 +11,6 @@ public abstract class AbstractScenario : MonoBehaviour, IScenario {
     public string GoodChoiceText;
     public string BadChoiceText;
     public string DefaultChoiceText;
-    public string ScenarioIdentifier = "default";
     protected TextMesh _textMesh; // gui countdown mesh (user sees this)
 
     // various flags
@@ -28,6 +30,9 @@ public abstract class AbstractScenario : MonoBehaviour, IScenario {
         // slow time
         SlowTime();
 
+        // randomize the menu
+        RandomizeSelectionMenuPosition();
+
         //Set menu to active
         SetMenuActive();
 
@@ -39,7 +44,8 @@ public abstract class AbstractScenario : MonoBehaviour, IScenario {
         _textMesh = GameObject.Find("TimerText").GetComponent<TextMesh>();
 
         // set initial count down value
-        _textMesh.text = Timer.ToString();
+	    int time = (int) Timer;
+	    _textMesh.text = time.ToString();
 
         Debug.Log("init complete");
 	}
@@ -101,6 +107,36 @@ public abstract class AbstractScenario : MonoBehaviour, IScenario {
         _selectionResult = "";
     }
 
+    void RandomizeSelectionMenuPosition()
+    {
+        // hold possible Y values of menu items
+        var yPosList = new List<float>()
+        {
+            0, 3, 6
+        };
+
+        // random number
+        Random rnd = new Random();
+
+        int min = 0, max = 2;
+        List<Transform> menuItemList = GetMenuChildren();
+
+        for (int i = 0; i <= 2; i++)
+        {
+            int sel = rnd.Next(min, max);
+            menuItemList[i].localPosition = new Vector3(0, yPosList[sel], 0);
+            Debug.Log(yPosList[sel]);
+            yPosList.Remove(yPosList[sel]);
+            max--;
+        }
+
+    }
+
+    List<Transform> GetMenuChildren()
+    {
+        return GameObject.Find("ScenarioMenu").transform.Cast<Transform>().ToList();
+    }
+
     void SetMenuText()
     {
         GameObject.Find("GoodSelectionText").GetComponent<TextMesh>().text = GoodChoiceText;
@@ -112,9 +148,10 @@ public abstract class AbstractScenario : MonoBehaviour, IScenario {
     protected void UpdateTimer()
     {
         Timer -= Time.deltaTime / Time.timeScale;
-        if (Timer > 0)
+        if (Timer >= 1)
         {
-            _textMesh.text = Timer.ToString();
+            int time = (int) Timer;
+            _textMesh.text = time.ToString();
         }
         else
         {
