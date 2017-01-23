@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using System.Collections;
 
 public class Look : MonoBehaviour
@@ -22,6 +23,7 @@ public class Look : MonoBehaviour
     {
         if (obj.gameObject.name == "car_body")
         {
+            _driver.LookAtRoad = !(Math.Abs(Amount) > 0);
             _driver.NewTarget = Amount;
         }
     }

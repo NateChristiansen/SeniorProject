@@ -18,16 +18,20 @@ public abstract class AbstractScenario : MonoBehaviour, IScenario {
     protected static bool _scenarioEnded;
     protected static bool _selectionMade;
     protected static string _selectionResult;
-
-    // Use this for initialization
-	protected void Start () 
+    protected bool _isTriggered;
+    void OnTriggerEnter(Collider col)
     {
-        // init the defaults
-        this.enabled = true;
-        _scenarioEnded = false;
-        _selectionMade = false;
-        _selectionResult = "default";
+        if (col.gameObject.name == "car_body")
+        {
+            if (_isTriggered) return;
+            enabled = true;
+            Begin();
+            _isTriggered = true;
+        }
+    }
 
+    protected void Begin()
+    {
         // slow time
         SlowTime();
 
@@ -45,8 +49,18 @@ public abstract class AbstractScenario : MonoBehaviour, IScenario {
         _textMesh = GameObject.Find("TimerText").GetComponent<TextMesh>();
 
         // set initial count down value
-	    int time = (int) Timer;
-	    _textMesh.text = time.ToString();
+        int time = (int)Timer;
+        _textMesh.text = time.ToString();
+    }
+
+    // Use this for initialization
+    protected void Start () 
+    {
+        // init the defaults
+        this.enabled = false;
+        _scenarioEnded = false;
+        _selectionMade = false;
+        _selectionResult = "default";
 	}
 	
 	// Update is called once per frame

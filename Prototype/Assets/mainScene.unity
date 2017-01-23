@@ -1766,8 +1766,8 @@ GameObject:
   - 33: {fileID: 124539025}
   - 65: {fileID: 124539024}
   - 23: {fileID: 124539023}
-  - 114: {fileID: 124539028}
   - 114: {fileID: 124539029}
+  - 114: {fileID: 124539027}
   m_Layer: 0
   m_Name: StopSignScenarioTrigger
   m_TagString: Untagged
@@ -1836,7 +1836,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
---- !u!114 &124539028
+--- !u!114 &124539027
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -1844,13 +1844,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 124539022}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae767f06be58c2d4ca65119e3645d71e, type: 3}
+  m_Script: {fileID: 11500000, guid: df81692ae4880484dbb6e96709854d19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Timer: 6
   GoodChoiceText: Yell STOP!
-  BadChoiceText: Keep going
+  BadChoiceText: Yo what you lookin at?
   DefaultChoiceText: (say nothing)
-  Time: 6
   SlowTimeScale: 0.2
 --- !u!114 &124539029
 MonoBehaviour:
