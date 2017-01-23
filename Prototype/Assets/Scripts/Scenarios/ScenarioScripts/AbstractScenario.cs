@@ -11,6 +11,7 @@ public abstract class AbstractScenario : MonoBehaviour, IScenario {
     public string GoodChoiceText;
     public string BadChoiceText;
     public string DefaultChoiceText;
+    public float SlowTimeScale = .25f;
     protected TextMesh _textMesh; // gui countdown mesh (user sees this)
 
     // various flags
@@ -163,7 +164,7 @@ public abstract class AbstractScenario : MonoBehaviour, IScenario {
     void SlowTime()
     {
         // slow down time (besides character)
-        Time.timeScale = (float).3;
+        Time.timeScale = SlowTimeScale;
     }
 
     // set whether the user has selected or not

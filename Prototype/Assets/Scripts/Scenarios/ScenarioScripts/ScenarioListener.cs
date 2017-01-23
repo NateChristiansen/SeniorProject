@@ -2,12 +2,8 @@
 using System.Collections;
 using System.Threading;
 
-public class ScenarioListener : MonoBehaviour {
-
-    public string GoodChoiceText;
-    public string BadChoiceText;
-    public string DefaultChoiceText;
-    public float Time;
+public class ScenarioListener : MonoBehaviour
+{
 
     private static string _triggerName;
 
