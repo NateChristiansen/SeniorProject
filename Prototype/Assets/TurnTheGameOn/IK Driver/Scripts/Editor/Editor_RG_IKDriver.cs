@@ -37,7 +37,7 @@ public class Editor_RG_IKDriver : Editor {
 		///
 		SerializedProperty mobile = serializedObject.FindProperty("mobile");
 		EditorGUI.BeginChangeCheck();
-		EditorGUILayout.PropertyField(mobile, true);
+		//EditorGUILayout.PropertyField(mobile, true);
 		if (EditorGUI.EndChangeCheck())
 			serializedObject.ApplyModifiedProperties();
 
@@ -51,34 +51,8 @@ public class Editor_RG_IKDriver : Editor {
 		if (EditorGUI.EndChangeCheck())
 			serializedObject.ApplyModifiedProperties();
 		///
-		SerializedProperty gearText = serializedObject.FindProperty("gearText");
-		EditorGUI.BeginChangeCheck();
-		EditorGUILayout.PropertyField(gearText, true);
-		if (EditorGUI.EndChangeCheck())
-			serializedObject.ApplyModifiedProperties();
-		EditorGUILayout.EndVertical();
 		///
 		EditorGUILayout.BeginVertical("Box");
-		SerializedProperty steeringTargets = serializedObject.FindProperty("steeringTargets");
-		EditorGUI.BeginChangeCheck();
-		EditorGUILayout.PropertyField(steeringTargets, true);
-		if (EditorGUI.EndChangeCheck())
-			serializedObject.ApplyModifiedProperties();
-		///
-		if (rg_ikDriver.steeringTargets == RG_IKDriver.SteeringTargets.All) {
-			SerializedProperty steeringWheelRotation = serializedObject.FindProperty ("steeringWheelRotation");
-			EditorGUI.BeginChangeCheck ();
-			EditorGUILayout.PropertyField (steeringWheelRotation, true);
-			if (EditorGUI.EndChangeCheck ())
-				serializedObject.ApplyModifiedProperties ();
-		} else if(rg_ikDriver.steeringTargets == RG_IKDriver.SteeringTargets.Two){
-			///
-			SerializedProperty steeringWheelRotationTwoTargets = serializedObject.FindProperty ("steeringWheelRotationTwoTargets");
-			EditorGUI.BeginChangeCheck ();
-			EditorGUILayout.PropertyField (steeringWheelRotationTwoTargets, true);
-			if (EditorGUI.EndChangeCheck ())
-				serializedObject.ApplyModifiedProperties ();
-		}
 		///
 		SerializedProperty steeringRotationSpeed = serializedObject.FindProperty("steeringRotationSpeed");
 		EditorGUI.BeginChangeCheck();

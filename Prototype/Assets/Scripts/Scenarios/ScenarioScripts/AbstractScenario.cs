@@ -47,8 +47,6 @@ public abstract class AbstractScenario : MonoBehaviour, IScenario {
         // set initial count down value
 	    int time = (int) Timer;
 	    _textMesh.text = time.ToString();
-
-        Debug.Log("init complete");
 	}
 	
 	// Update is called once per frame
@@ -126,7 +124,6 @@ public abstract class AbstractScenario : MonoBehaviour, IScenario {
         {
             int sel = rnd.Next(min, max);
             menuItemList[i].localPosition = new Vector3(0, yPosList[sel], 0);
-            Debug.Log(yPosList[sel]);
             yPosList.Remove(yPosList[sel]);
             max--;
         }

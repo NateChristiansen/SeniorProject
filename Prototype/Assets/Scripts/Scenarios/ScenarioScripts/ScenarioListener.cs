@@ -8,7 +8,7 @@ public class ScenarioListener : MonoBehaviour
     private static string _triggerName;
 
     // determine the scenario type
-    void OnCollisionEnter(Collision col)
+    void OnTriggerEnter(Collider col)
     {
        _triggerName = col.gameObject.name;
     }
