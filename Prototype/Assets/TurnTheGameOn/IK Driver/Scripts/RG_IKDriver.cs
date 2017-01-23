@@ -17,12 +17,9 @@ public class RG_IKDriver : MonoBehaviour
         Two,
         All
     }
-
-    public Queue<float> HorizontalQueue = new Queue<float>();
-    private float _previousHorizontal = 0;
-    public Queue<float> VerticalQueue = new Queue<float>();
-    private float _previousVertical = 0;
-    private readonly float[] _persistantValues = {0f, -1f, 1f};
+    
+    public float HorizontalInput = 0;
+    public float VerticalInput = 0;
 
     //reference to the animator component to call IK functions
     protected Animator animator;
@@ -263,24 +260,8 @@ public class RG_IKDriver : MonoBehaviour
 						}
 					} else {*/
 
-                    // retrieve from queue or use previous
-                    if (HorizontalQueue.Any())
-                    {
-                        horizontalInput = HorizontalQueue.Dequeue();
-                        if (_persistantValues.Contains(horizontalInput))
-                            _previousHorizontal = horizontalInput;
-                    }
-                    else
-                        horizontalInput = _previousHorizontal;
-
-                    if (VerticalQueue.Any())
-                    {
-                        verticalInput = VerticalQueue.Dequeue();
-                        if (_persistantValues.Contains(verticalInput))
-                            _previousVertical = verticalInput;
-                    }
-                    else
-                        verticalInput = _previousVertical;
+                    horizontalInput = HorizontalInput;
+                    verticalInput = VerticalInput;
                     /* old stuff
                      * horizontalInput = Input.GetAxis("Horizontal");
                      * verticalInput = Input.GetAxis("Vertical");
@@ -298,18 +279,18 @@ public class RG_IKDriver : MonoBehaviour
 								} else*/
                             if (horizontalInput >= 0.5f)
                             {
-                                rightHandObj = steeringS;
+                                //rightHandObj = steeringS;
                                 leftHandObj = steeringN;
                             }
                             else
                             {
-                                rightHandObj = steeringSE;
+                                //rightHandObj = steeringSE;
                                 leftHandObj = steeringNW;
                             }
                         }
                         else if (steeringTargets == SteeringTargets.Two)
                         {
-                            rightHandObj = steeringE;
+                            //rightHandObj = steeringE;
                             leftHandObj = steeringW;
                         }
                         lookTargetPosX = defaultLookXPos + maxLookRight;
@@ -325,18 +306,18 @@ public class RG_IKDriver : MonoBehaviour
 								} else*/
                             if (horizontalInput <= -0.5f)
                             {
-                                rightHandObj = steeringN;
+                                //rightHandObj = steeringN;
                                 leftHandObj = steeringS;
                             }
                             else
                             {
-                                rightHandObj = steeringNE;
+                                //rightHandObj = steeringNE;
                                 leftHandObj = steeringSW;
                             }
                         }
                         else if (steeringTargets == SteeringTargets.Two)
                         {
-                            rightHandObj = steeringE;
+                            //rightHandObj = steeringE;
                             leftHandObj = steeringW;
                         }
                         lookTargetPosX = defaultLookXPos + maxLookLeft;
@@ -344,7 +325,7 @@ public class RG_IKDriver : MonoBehaviour
                     }
                     else
                     {
-                        rightHandObj = steeringE;
+                        //rightHandObj = steeringE;
                         leftHandObj = steeringW;
                         lookTargetPosX = defaultLookXPos;
                         if (Mathf.Approximately(lookPosition.x, lookTargetPosX))
@@ -378,26 +359,26 @@ public class RG_IKDriver : MonoBehaviour
                     }
 
                     targetRightFootIK.localPosition = Vector3.Lerp(targetRightFootIK.localPosition,
-                        rightFootObj.localPosition, 8*Time.deltaTime);
+                        rightFootObj.localPosition, 2*Time.deltaTime);
                     targetRightFootIK.localRotation = Quaternion.Lerp(targetRightFootIK.localRotation,
-                        rightFootObj.localRotation, 8*Time.deltaTime);
+                        rightFootObj.localRotation, 2*Time.deltaTime);
 
                     targetLeftFootIK.localPosition = Vector3.Lerp(targetLeftFootIK.localPosition,
-                        leftFootObj.localPosition, 8*Time.deltaTime);
+                        leftFootObj.localPosition, 2*Time.deltaTime);
                     targetLeftFootIK.localRotation = Quaternion.Lerp(targetLeftFootIK.localRotation,
-                        leftFootObj.localRotation, 8*Time.deltaTime);
+                        leftFootObj.localRotation, 2*Time.deltaTime);
 
                     targetLeftHandIK.localPosition = Vector3.Slerp(targetLeftHandIK.localPosition,
-                        leftHandObj.localPosition, 8*Time.deltaTime);
+                        leftHandObj.localPosition, 2*Time.deltaTime);
                     targetLeftHandIK.localRotation = Quaternion.Lerp(targetLeftHandIK.localRotation,
-                        leftHandObj.localRotation, 8*Time.deltaTime);
+                        leftHandObj.localRotation, 2*Time.deltaTime);
 
                     if (shifting == false)
                     {
                         targetRightHandIK.localPosition = Vector3.Slerp(targetRightHandIK.localPosition,
-                            rightHandObj.localPosition, 8*Time.deltaTime);
+                            rightHandObj.localPosition, 2*Time.deltaTime);
                         targetRightHandIK.localRotation = Quaternion.Lerp(targetRightHandIK.localRotation,
-                            rightHandObj.localRotation, 8*Time.deltaTime);
+                            rightHandObj.localRotation, 2*Time.deltaTime);
                     }
                     lookPosition.x = Mathf.Lerp(lookPosition.x, lookTargetPosX, lookObjMoveSpeed*Time.deltaTime);
                     lookObj.localPosition = lookPosition;
