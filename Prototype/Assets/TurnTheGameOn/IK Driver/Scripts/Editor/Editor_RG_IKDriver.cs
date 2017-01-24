@@ -35,7 +35,7 @@ public class Editor_RG_IKDriver : Editor {
 		if (EditorGUI.EndChangeCheck())
 			serializedObject.ApplyModifiedProperties();
 		///
-		SerializedProperty mobile = serializedObject.FindProperty("mobile");
+		//SerializedProperty mobile = serializedObject.FindProperty("mobile");
 		EditorGUI.BeginChangeCheck();
 		//EditorGUILayout.PropertyField(mobile, true);
 		if (EditorGUI.EndChangeCheck())

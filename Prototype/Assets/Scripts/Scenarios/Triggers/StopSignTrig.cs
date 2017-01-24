@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class StopSignTrig : AbstractScenarioTrigger 
+public class StopSignTrig : ScenarioTrigger 
 {
     private bool _isTriggered;
     void OnTriggerEnter(Collider col)

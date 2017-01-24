@@ -1,17 +1,20 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PassengerTrig : ScenarioTrigger
-{
+public class ScenarioTrigger : MonoBehaviour {
 
-    //private bool _isTriggered;
+    public string GoodChoiceText;
+    public string BadChoiceText;
+    public string DefaultChoiceText;
+    public float Time;
+    public float SlowTimeScale;
+    protected bool _isTriggered;
     void OnTriggerEnter(Collider col)
     {
         if (col.gameObject.name == "car_body")
         {
             if (_isTriggered) return;
-
-            var stop = gameObject.AddComponent<PassengerScenario>();
+            var stop = gameObject.AddComponent<StopSignScenario>();
             stop.GoodChoiceText = GoodChoiceText;
             stop.BadChoiceText = BadChoiceText;
             stop.DefaultChoiceText = DefaultChoiceText;
@@ -21,8 +24,8 @@ public class PassengerTrig : ScenarioTrigger
         }
     }
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
 	
 	}
 	
