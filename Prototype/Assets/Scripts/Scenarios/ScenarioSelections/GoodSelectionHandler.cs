@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using System.Collections;
 
 public class GoodSelectionHandler : AbstractScenarioHandler, IGvrGazeResponder {
@@ -25,9 +26,16 @@ public class GoodSelectionHandler : AbstractScenarioHandler, IGvrGazeResponder {
 
     public void OnGazeTrigger()
     {
-        string s = GameObject.Find("Vehicle").gameObject.GetComponent<ScenarioListener>().GetTriggerName();
-        GameObject.Find(s).gameObject.GetComponent<AbstractScenario>().SetSelectionResult("good");
-        GameObject.Find(s).gameObject.GetComponent<AbstractScenario>().SetSelectionMade(true);
+        try
+        {
+            string s = GameObject.Find("Vehicle").gameObject.GetComponent<ScenarioListener>().GetTriggerName();
+            GameObject.Find(s).gameObject.GetComponent<AbstractScenario>().SetSelectionResult("good");
+            GameObject.Find(s).gameObject.GetComponent<AbstractScenario>().SetSelectionMade(true);
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+        }
         ColorChoice();
     }
 }

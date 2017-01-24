@@ -4,16 +4,19 @@ using System.Collections;
 public class StopSignTrig : AbstractScenarioTrigger 
 {
     private bool _isTriggered;
-    void OnCollisionExit(Collision col)
+    void OnTriggerEnter(Collider col)
     {
-        if (_isTriggered) return;
-        var stop = gameObject.AddComponent<StopSignScenario>();
-        stop.GoodChoiceText = GoodChoiceText;
-        stop.BadChoiceText = BadChoiceText;
-        stop.DefaultChoiceText = DefaultChoiceText;
-        stop.Timer = Time;
-        stop.SlowTimeScale = .2f;
-        _isTriggered = true;
+        if (col.gameObject.name == "car_body")
+        {
+            if (_isTriggered) return;
+            var stop = gameObject.AddComponent<StopSignScenario>();
+            stop.GoodChoiceText = GoodChoiceText;
+            stop.BadChoiceText = BadChoiceText;
+            stop.DefaultChoiceText = DefaultChoiceText;
+            stop.Timer = Time;
+            stop.SlowTimeScale = .2f;
+            _isTriggered = true;
+        }
     }
 
 	// Use this for initialization

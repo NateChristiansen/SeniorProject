@@ -1,6 +1,5 @@
 ﻿using System;
 using UnityEngine;
-using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,20 +10,18 @@ using Random = UnityEngine.Random;
 [RequireComponent(typeof (Animator))]
 public class RG_IKDriver : MonoBehaviour
 {
+    public int HorizontalInput = 0;
+    public int VerticalInput = 0;
 
-    public enum SteeringTargets
-    {
-        Two,
-        All
-    }
-    
-    public float HorizontalInput = 0;
-    public float VerticalInput = 0;
+    public bool LookAtRoad = true;
+    public float NewTarget;
 
     //reference to the animator component to call IK functions
     protected Animator animator;
     //the look target transform position.x value
     private float lookTargetPosX;
+    public float lookTargetPosY;
+    private float defaultLookYPos = 1;
     private Vector3 lookPosition;
     //the starting look target transform.x value
     [HideInInspector] public float defaultLookXPos;
@@ -51,7 +48,6 @@ public class RG_IKDriver : MonoBehaviour
     //set this bool to true to trigger a shift
     [HideInInspector] public bool shift;
     //assign the gear UI text component, when this components text changes a shift will be triggered
-    [HideInInspector] public Text gearText;
     //IK driver targets
     [HideInInspector] public Transform targetRightHandIK;
     [HideInInspector] public Transform rightHandTarget;
@@ -82,11 +78,9 @@ public class RG_IKDriver : MonoBehaviour
 
     private string gearString;
     private float yVelocity;
-    public bool mobile;
     public Vector3 defaultSteering;
     public float steeringRotationSpeed = 0.07f; //0.25f
     private float currentHorizontal;
-    public SteeringTargets steeringTargets;
     [Range(0, 1)] public float wheelShake = 1;
     public WheelCollider wheelCollider;
     private float horizontalInput;
@@ -94,32 +88,15 @@ public class RG_IKDriver : MonoBehaviour
 
     private void Start()
     {
-        if (GameObject.Find("Car Input") != null)
-        {
-            mobile = true;
-        }
         transform.localPosition = avatarPosition;
         animator = GetComponent<Animator>();
         lookTargetPosX = defaultLookXPos;
+        lookTargetPosY = defaultLookYPos;
         TargetShifter();
-        if (gearText == null)
-        {
-            //gearText = GameObject.Find ("Gear Text").GetComponent<Text>();
-        }
-        //var x = new HumanPoseHandler(animator.avatar, animator.GetBoneTransform(HumanBodyBones.Jaw));
-        //x.GetHumanPose();
     }
 
     private void Update()
     {
-        if (gearText != null)
-        {
-            if (gearText.text != gearString)
-            {
-                gearString = gearText.text;
-                TargetShifter();
-            }
-        }
         if (shift)
         {
             shift = false;
@@ -128,15 +105,7 @@ public class RG_IKDriver : MonoBehaviour
         if (steeringWheel != null)
         {
             Vector3 temp2;
-            float rotationLimit;
-            if (steeringTargets == SteeringTargets.Two)
-            {
-                rotationLimit = steeringWheelRotationTwoTargets;
-            }
-            else
-            {
-                rotationLimit = steeringWheelRotation;
-            }
+            float rotationLimit = steeringWheelRotation;
             float tempShake = Random.Range(1.0f, 2.0f);
             tempShake = tempShake*wheelShake*(wheelCollider.rpm/25);
             tempShake = Random.Range(-tempShake, tempShake);
@@ -145,9 +114,6 @@ public class RG_IKDriver : MonoBehaviour
                 steeringRotationSpeed);
             steeringWheel.localEulerAngles = new Vector3(defaultSteering.x, defaultSteering.y, zAngle);
         }
-
-
-
     }
 
     public void TargetWheel()
@@ -207,128 +173,74 @@ public class RG_IKDriver : MonoBehaviour
 
                     lookPosition = lookObj.localPosition;
 
-                    /*
-					if (mobile) {
-						horizontalInput = UnityStandardAssets.CrossPlatformInput.CrossPlatformInputManager.GetAxis ("Horizontal");
-						verticalInput = UnityStandardAssets.CrossPlatformInput.CrossPlatformInputManager.GetAxis ("Vertical");
-						//currentHorizontal = Mathf.MoveTowards (currentHorizontal, horizontalInput, Time.deltaTime * 1);
-						if (horizontalInput > 0) {
-							if (steeringTargets == SteeringTargets.All) {
-								if (horizontalInput >= 0.75f) {
-									rightHandObj = steeringNW;
-									leftHandObj = steeringSE;
-								} else if (horizontalInput >= 0.5f) {							
-									rightHandObj = steeringN;
-									leftHandObj = steeringS;
-								} else {
-									rightHandObj = steeringNE;
-									leftHandObj = steeringSW;
-								}
-							}else if(steeringTargets == SteeringTargets.Two){
-								rightHandObj = steeringE;
-								leftHandObj = steeringW;
-							}
-							lookTargetPosX = defaultLookXPos + maxLookRight;
-							lookObjMoveSpeed = minLookSpeed;
-						} else if (horizontalInput < 0) {
-							if (steeringTargets == SteeringTargets.All) {
-								if (horizontalInput <= -0.75f) {
-									rightHandObj = steeringSW;
-									leftHandObj = steeringNE;
-								} else if (horizontalInput <= -0.5f) {
-									rightHandObj = steeringS;
-									leftHandObj = steeringN;
-								} else {
-									rightHandObj = steeringSE;
-									leftHandObj = steeringNW;
-								}
-							}else if(steeringTargets == SteeringTargets.Two){
-								rightHandObj = steeringE;
-								leftHandObj = steeringW;
-							}
-							lookTargetPosX = defaultLookXPos + maxLookLeft;
-							lookObjMoveSpeed = minLookSpeed;
-						} else {
-							rightHandObj = steeringE;
-							leftHandObj = steeringW;
-							lookTargetPosX = defaultLookXPos;
-							if (Mathf.Approximately( lookPosition.x, lookTargetPosX)) {
-								lookObjMoveSpeed = minLookSpeed;
-							} else {
-								lookObjMoveSpeed = Mathf.Lerp (lookObjMoveSpeed, maxLookSpeed, 1 * Time.deltaTime);
-							}
-						}
-					} else {*/
+                    if (HorizontalInput > 0)
+                    {
+                        if (horizontalInput == 2)
+                        {
+                            //rightHandObj = steeringSW;
+                            leftHandObj = steeringNE;
+                        }
+                        else if (HorizontalInput == 1)
+                        {
+                            //rightHandObj = steeringS;
+                            leftHandObj = steeringN;
+                        }
+                        else
+                        {
+                            //rightHandObj = steeringSE;
+                            leftHandObj = steeringNW;
+                        }
+                        if (LookAtRoad)
+                            lookTargetPosX = defaultLookXPos + maxLookRight;
+                        else
+                            lookTargetPosX = defaultLookXPos;
 
-                    horizontalInput = HorizontalInput;
-                    verticalInput = VerticalInput;
-                    /* old stuff
-                     * horizontalInput = Input.GetAxis("Horizontal");
-                     * verticalInput = Input.GetAxis("Vertical");
-                    */
-                    if (Math.Abs(horizontalInput) > 0)
-                        //Debug.Log(horizontalInput);
-                    currentHorizontal = Mathf.MoveTowards(currentHorizontal, horizontalInput, Time.deltaTime*1);
-                    if (horizontalInput > 0)
-                    {
-                        if (steeringTargets == SteeringTargets.All)
+                        if (!Mathf.Approximately(lookPosition.y, lookTargetPosY))
                         {
-                            /*if (horizontalInput >= 1) {
-									rightHandObj = steeringSW;
-									leftHandObj = steeringNE;
-								} else*/
-                            if (horizontalInput >= 0.5f)
-                            {
-                                //rightHandObj = steeringS;
-                                leftHandObj = steeringN;
-                            }
-                            else
-                            {
-                                //rightHandObj = steeringSE;
-                                leftHandObj = steeringNW;
-                            }
+                            lookObjMoveSpeed = minLookSpeed;
                         }
-                        else if (steeringTargets == SteeringTargets.Two)
+                        else
                         {
-                            //rightHandObj = steeringE;
-                            leftHandObj = steeringW;
+                            lookObjMoveSpeed = Mathf.Lerp(lookObjMoveSpeed, maxLookSpeed, 1 * Time.deltaTime);
                         }
-                        lookTargetPosX = defaultLookXPos + maxLookRight;
-                        lookObjMoveSpeed = minLookSpeed;
                     }
-                    else if (horizontalInput < 0)
+                    else if (HorizontalInput < 0)
                     {
-                        if (steeringTargets == SteeringTargets.All)
+                        if (HorizontalInput == -2)
                         {
-                            /*if (horizontalInput <= -1) {
-									rightHandObj = steeringNW;
-									leftHandObj = steeringSE;
-								} else*/
-                            if (horizontalInput <= -0.5f)
-                            {
-                                //rightHandObj = steeringN;
-                                leftHandObj = steeringS;
-                            }
-                            else
-                            {
-                                //rightHandObj = steeringNE;
-                                leftHandObj = steeringSW;
-                            }
+                            //rightHandObj = steeringNW;
+                            leftHandObj = steeringSE;
                         }
-                        else if (steeringTargets == SteeringTargets.Two)
+                        else if (HorizontalInput == 1)
                         {
-                            //rightHandObj = steeringE;
-                            leftHandObj = steeringW;
+                            //rightHandObj = steeringN;
+                            leftHandObj = steeringS;
                         }
-                        lookTargetPosX = defaultLookXPos + maxLookLeft;
-                        lookObjMoveSpeed = minLookSpeed;
+                        else
+                        {
+                            //rightHandObj = steeringNE;
+                            leftHandObj = steeringSW;
+                        }
+                        if (LookAtRoad)
+                            lookTargetPosX = defaultLookXPos + maxLookLeft;
+                        else
+                            lookTargetPosX = defaultLookXPos;
+
+
+                        lookObjMoveSpeed = !Mathf.Approximately(lookPosition.y, lookTargetPosY) ? minLookSpeed : Mathf.Lerp(lookObjMoveSpeed, maxLookSpeed, 1 * Time.deltaTime);
                     }
                     else
                     {
                         //rightHandObj = steeringE;
                         leftHandObj = steeringW;
                         lookTargetPosX = defaultLookXPos;
-                        if (Mathf.Approximately(lookPosition.x, lookTargetPosX))
+
+                        if (LookAtRoad)
+                            lookTargetPosY = defaultLookYPos;
+                        else
+                            lookTargetPosY = defaultLookYPos + NewTarget;
+
+                        if (Mathf.Approximately(lookPosition.x, lookTargetPosX) && Mathf.Approximately(lookPosition.y, lookTargetPosY))
                         {
                             lookObjMoveSpeed = minLookSpeed;
                         }
@@ -337,21 +249,23 @@ public class RG_IKDriver : MonoBehaviour
                             lookObjMoveSpeed = Mathf.Lerp(lookObjMoveSpeed, maxLookSpeed, 1*Time.deltaTime);
                         }
                     }
+                    //if (!LookAtRoad && OffTarget != null)
+                    //{
+                    //    lookTargetPosY = OffTarget.transform.position.y;
+                    //    lookObjMoveSpeed = Mathf.Lerp(lookObjMoveSpeed, maxLookSpeed, 1*Time.deltaTime);
+                    //}
+                    //else
+                    //{
+                    //    lookTargetPosY = lookObj.position.y;
+                    //}
 
-                    if (verticalInput > 0)
+                    if (VerticalInput > 0)
                     {
                         rightFootObj = rightFootGas;
                     }
-                    else if (verticalInput < 0)
+                    else if (VerticalInput < 0)
                     {
-                        if (gearString == "R")
-                        {
-                            rightFootObj = rightFootGas;
-                        }
-                        else
-                        {
-                            rightFootObj = rightFootBrake;
-                        }
+                        rightFootObj = rightFootBrake;
                     }
                     else
                     {
@@ -381,23 +295,10 @@ public class RG_IKDriver : MonoBehaviour
                             rightHandObj.localRotation, 2*Time.deltaTime);
                     }
                     lookPosition.x = Mathf.Lerp(lookPosition.x, lookTargetPosX, lookObjMoveSpeed*Time.deltaTime);
+                    lookPosition.y = Mathf.Lerp(lookPosition.y, lookTargetPosY, lookObjMoveSpeed*Time.deltaTime);
                     lookObj.localPosition = lookPosition;
                 }
             }
-            else
-            {
-                animator.SetIKPositionWeight(AvatarIKGoal.LeftHand, 0);
-                animator.SetIKRotationWeight(AvatarIKGoal.LeftHand, 0);
-                animator.SetIKPositionWeight(AvatarIKGoal.RightHand, 0);
-                animator.SetIKRotationWeight(AvatarIKGoal.RightHand, 0);
-                animator.SetLookAtWeight(0);
-
-                animator.SetIKPositionWeight(AvatarIKGoal.LeftFoot, 0);
-                animator.SetIKRotationWeight(AvatarIKGoal.LeftFoot, 0);
-                animator.SetIKPositionWeight(AvatarIKGoal.RightFoot, 0);
-                animator.SetIKRotationWeight(AvatarIKGoal.RightFoot, 0);
-            }
         }
-
     }
 }

@@ -1,10 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
-using System.Collections.Generic;
 
-public class GasPedal : MonoBehaviour
+public class Look : MonoBehaviour
 {
+
     private RG_IKDriver _driver;
+    public float Amount;
     // Use this for initialization
     void Start()
     {
@@ -21,7 +22,7 @@ public class GasPedal : MonoBehaviour
     {
         if (obj.gameObject.name == "car_body")
         {
-            _driver.VerticalInput = 1;
+            _driver.NewTarget = Amount;
         }
     }
 }

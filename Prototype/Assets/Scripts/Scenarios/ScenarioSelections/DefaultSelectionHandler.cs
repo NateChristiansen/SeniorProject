@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using System.Collections;
 
 public class DefaultSelectionHandler : AbstractScenarioHandler, IGvrGazeResponder
@@ -27,8 +28,15 @@ public class DefaultSelectionHandler : AbstractScenarioHandler, IGvrGazeResponde
     public void OnGazeTrigger()
     {
         string s = GameObject.Find("Vehicle").gameObject.GetComponent<ScenarioListener>().GetTriggerName();
-        GameObject.Find(s).gameObject.GetComponent<AbstractScenario>().SetSelectionResult("default");
-        GameObject.Find(s).gameObject.GetComponent<AbstractScenario>().SetSelectionMade(true);
+        try
+        {
+            GameObject.Find(s).gameObject.GetComponent<AbstractScenario>().SetSelectionResult("default");
+            GameObject.Find(s).gameObject.GetComponent<AbstractScenario>().SetSelectionMade(true);
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+        }
         ColorChoice();
     }
 

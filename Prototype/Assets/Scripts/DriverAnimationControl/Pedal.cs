@@ -2,8 +2,14 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class BrakePedal : MonoBehaviour
+public class Pedal : MonoBehaviour
 {
+    public enum FootState
+    {
+        Gas = 1, Brake = -1, Idle = 0
+    }
+
+    public FootState FootType;
     private RG_IKDriver _driver;
     // Use this for initialization
     void Start()
@@ -21,7 +27,7 @@ public class BrakePedal : MonoBehaviour
     {
         if (obj.gameObject.name == "car_body")
         {
-            _driver.VerticalInput = -1;
+            _driver.VerticalInput = (int) FootType;
         }
     }
 }
