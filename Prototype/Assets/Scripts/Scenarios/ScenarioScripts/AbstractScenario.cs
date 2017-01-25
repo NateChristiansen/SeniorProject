@@ -107,7 +107,6 @@ public abstract class AbstractScenario : MonoBehaviour, IScenario {
         {
             BadResult();
         }
-        Debug.Log(number%2);
 
         this.enabled = false;
     }
