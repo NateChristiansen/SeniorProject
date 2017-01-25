@@ -23,13 +23,6 @@ public class PassengerScenario : AbstractScenario {
         this.enabled = false;
     }
 
-    // the rersult of a default choice
-    public override void DefaultResult()
-    {
-        Debug.Log("DEFAULT MADE");
-        this.enabled = false;
-    }
-
     // Update is called once per frame
     void Update()
     {

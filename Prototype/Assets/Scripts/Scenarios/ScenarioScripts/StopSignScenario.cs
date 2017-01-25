@@ -13,21 +13,14 @@ public class StopSignScenario : AbstractScenario
     // the result of a good choice
     public override void GoodResult()
     {
-        Debug.Log("GOOD MADE");
+        GameObject.Find("StopObject").GetComponent<StopObject>().ChoiceIsGood = true;
         this.enabled = false;
     }
 
     // the result of a bad choice
     public override void BadResult()
     {
-        Debug.Log("BAD MADE");
-        this.enabled = false;
-    }
-
-    // the rersult of a default choice
-    public override void DefaultResult()
-    {
-        Debug.Log("DEFAULT MADE");
+        GameObject.Find("StopObject").GetComponent<StopObject>().ChoiceIsGood = false;
         this.enabled = false;
     }
 

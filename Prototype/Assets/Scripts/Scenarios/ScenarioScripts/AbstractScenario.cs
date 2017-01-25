@@ -94,7 +94,23 @@ public abstract class AbstractScenario : MonoBehaviour, IScenario {
 
     public abstract void BadResult();
 
-    public abstract void DefaultResult();
+    public void DefaultResult()
+    {
+        Random rnd = new Random();
+        int number = rnd.Next(1, 10);
+
+        if (number%2 == 0)
+        {
+            GoodResult();
+        }
+        else
+        {
+            BadResult();
+        }
+        Debug.Log(number%2);
+
+        this.enabled = false;
+    }
 
     public void EndScenario()
     {

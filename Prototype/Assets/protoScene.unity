@@ -214,6 +214,61 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 475054, guid: dc9862779b979cb478febc953795267a, type: 2}
   m_PrefabInternal: {fileID: 8122001}
+--- !u!1 &13569828
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 13569831}
+  - 65: {fileID: 13569830}
+  - 114: {fileID: 13569829}
+  m_Layer: 0
+  m_Name: StopObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &13569829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 13569828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4357a79a7cb8e2743bec754cc1f14f50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StopTimeInSeconds: 3
+  ChoiceIsGood: 0
+--- !u!65 &13569830
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 13569828}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0, y: 40, z: 40}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &13569831
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 13569828}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -167, y: 41.44219, z: 47.649902}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 826077370}
+  m_RootOrder: 0
 --- !u!1001 &15562383
 Prefab:
   m_ObjectHideFlags: 0
@@ -1829,10 +1884,10 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 124539022}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 800.8, y: 10.5, z: 2373}
+  m_LocalRotation: {x: -0, y: 0.71286356, z: -0, w: 0.70130277}
+  m_LocalPosition: {x: 1971, y: 10.5, z: 3178}
   m_LocalScale: {x: 60, y: 5, z: 5}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90.909004, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
@@ -1849,7 +1904,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Timer: 6
   GoodChoiceText: Yell STOP!
-  BadChoiceText: Yo what you lookin at?
+  BadChoiceText: Keep going
   DefaultChoiceText: (say nothing)
   SlowTimeScale: 0.2
 --- !u!114 &124539029
@@ -2280,6 +2335,72 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 475054, guid: dc9862779b979cb478febc953795267a, type: 2}
   m_PrefabInternal: {fileID: 157175179}
+--- !u!1001 &159498649
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 826077370}
+    m_Modifications:
+    - target: {fileID: 427294, guid: 391b3629bc9043e4da29225c1af3c704, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -66.13135
+      objectReference: {fileID: 0}
+    - target: {fileID: 427294, guid: 391b3629bc9043e4da29225c1af3c704, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 69.50273
+      objectReference: {fileID: 0}
+    - target: {fileID: 427294, guid: 391b3629bc9043e4da29225c1af3c704, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 12.350098
+      objectReference: {fileID: 0}
+    - target: {fileID: 427294, guid: 391b3629bc9043e4da29225c1af3c704, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 427294, guid: 391b3629bc9043e4da29225c1af3c704, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0.028827993
+      objectReference: {fileID: 0}
+    - target: {fileID: 427294, guid: 391b3629bc9043e4da29225c1af3c704, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 427294, guid: 391b3629bc9043e4da29225c1af3c704, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.99958444
+      objectReference: {fileID: 0}
+    - target: {fileID: 427294, guid: 391b3629bc9043e4da29225c1af3c704, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 427294, guid: 391b3629bc9043e4da29225c1af3c704, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 3.2080002
+      objectReference: {fileID: 0}
+    - target: {fileID: 427294, guid: 391b3629bc9043e4da29225c1af3c704, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 427294, guid: 391b3629bc9043e4da29225c1af3c704, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 427294, guid: 391b3629bc9043e4da29225c1af3c704, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2369232, guid: 391b3629bc9043e4da29225c1af3c704, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3e0d1973b19d44843a6d826ea01d8e0d, type: 2}
+    - target: {fileID: 152466, guid: 391b3629bc9043e4da29225c1af3c704, type: 2}
+      propertyPath: m_Name
+      value: Stop sign1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 391b3629bc9043e4da29225c1af3c704, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &162081611
 Prefab:
   m_ObjectHideFlags: 0
@@ -6240,6 +6361,10 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 474440, guid: b7ac0920406bb0f41920740a0e750598, type: 2}
   m_PrefabInternal: {fileID: 422633954}
+--- !u!4 &424293414 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 427294, guid: 391b3629bc9043e4da29225c1af3c704, type: 2}
+  m_PrefabInternal: {fileID: 159498649}
 --- !u!1001 &429518174
 Prefab:
   m_ObjectHideFlags: 0
@@ -11616,6 +11741,36 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 475054, guid: dc9862779b979cb478febc953795267a, type: 2}
   m_PrefabInternal: {fileID: 820901796}
+--- !u!1 &826077369
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 826077370}
+  m_Layer: 0
+  m_Name: StopSignScenarioPkg
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &826077370
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 826077369}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2757.0312, y: -19.242188, z: 3135.4}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children:
+  - {fileID: 13569831}
+  - {fileID: 424293414}
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
 --- !u!1 &828306050
 GameObject:
   m_ObjectHideFlags: 0
@@ -13115,6 +13270,25 @@ Prefab:
         type: 2}
       propertyPath: ikActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000011355741956, guid: 367179eabecd67d4cac54b72bf443320, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 102000011182106074, guid: 367179eabecd67d4cac54b72bf443320,
+        type: 2}
+      propertyPath: m_CharacterSize
+      value: 0.018
+      objectReference: {fileID: 0}
+    - target: {fileID: 102000011094863114, guid: 367179eabecd67d4cac54b72bf443320,
+        type: 2}
+      propertyPath: m_CharacterSize
+      value: 0.018
+      objectReference: {fileID: 0}
+    - target: {fileID: 102000013792147722, guid: 367179eabecd67d4cac54b72bf443320,
+        type: 2}
+      propertyPath: m_CharacterSize
+      value: 0.018
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 367179eabecd67d4cac54b72bf443320, type: 2}
@@ -18420,7 +18594,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1218407014
 MonoBehaviour:
   m_ObjectHideFlags: 0
