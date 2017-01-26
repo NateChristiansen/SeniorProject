@@ -1918,7 +1918,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ea1ffe0e00e2fe4986bf25438d11058, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Amount: -0.5
+  LookType: -1
 --- !u!1001 &127682370
 Prefab:
   m_ObjectHideFlags: 0
@@ -2235,6 +2235,7 @@ MonoBehaviour:
   _close: 1
   points:
   - {fileID: 2117637096}
+  - {fileID: 320627455}
   - {fileID: 1151550280}
   - {fileID: 2037499337}
   - {fileID: 1597304824}
@@ -2263,6 +2264,7 @@ Transform:
   - {fileID: 448240285}
   - {fileID: 700876833}
   - {fileID: 1286832525}
+  - {fileID: 320627457}
   m_Father: {fileID: 0}
   m_RootOrder: 4
 --- !u!1001 &157175179
@@ -4476,6 +4478,76 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 475054, guid: dc9862779b979cb478febc953795267a, type: 2}
   m_PrefabInternal: {fileID: 317246087}
+--- !u!1 &320627454
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 320627457}
+  - 114: {fileID: 320627455}
+  - 114: {fileID: 320627456}
+  - 65: {fileID: 320627458}
+  m_Layer: 0
+  m_Name: Point 9
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &320627455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 320627454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dff893e341592e438963ea8cbceb377, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _curve: {fileID: 156438048}
+  handleStyle: 0
+  _handle1: {x: 0, y: 0, z: 0}
+  _handle2: {x: -0, y: -0, z: -0}
+--- !u!114 &320627456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 320627454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ea1ffe0e00e2fe4986bf25438d11058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LookType: -1
+--- !u!4 &320627457
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 320627454}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 1850}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 156438049}
+  m_RootOrder: 9
+--- !u!65 &320627458
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 320627454}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &321887062
 Prefab:
   m_ObjectHideFlags: 0
@@ -17197,7 +17269,6 @@ GameObject:
   - 114: {fileID: 1151550280}
   - 114: {fileID: 1151550283}
   - 65: {fileID: 1151550282}
-  - 114: {fileID: 1151550284}
   m_Layer: 0
   m_Name: Point 1
   m_TagString: Untagged
@@ -17257,18 +17328,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TurnType: 1
---- !u!114 &1151550284
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1151550279}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ea1ffe0e00e2fe4986bf25438d11058, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Amount: 0
 --- !u!1 &1153850212 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 145678, guid: dc9862779b979cb478febc953795267a, type: 2}
@@ -18622,7 +18681,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ea1ffe0e00e2fe4986bf25438d11058, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Amount: -0.5
+  LookType: 0
 --- !u!23 &1218407016
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -30583,6 +30642,7 @@ GameObject:
   - 114: {fileID: 2037499337}
   - 65: {fileID: 2037499339}
   - 114: {fileID: 2037499340}
+  - 114: {fileID: 2037499341}
   m_Layer: 0
   m_Name: Point 2
   m_TagString: Untagged
@@ -30642,6 +30702,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TurnType: 0
+--- !u!114 &2037499341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2037499336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ea1ffe0e00e2fe4986bf25438d11058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LookType: 0
 --- !u!1001 &2037953524
 Prefab:
   m_ObjectHideFlags: 0

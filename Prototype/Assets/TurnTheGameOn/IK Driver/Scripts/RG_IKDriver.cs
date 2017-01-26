@@ -12,9 +12,8 @@ public class RG_IKDriver : MonoBehaviour
 {
     public int HorizontalInput = 0;
     public int VerticalInput = 0;
-
-    public bool LookAtRoad = true;
-    public float NewTarget;
+    
+    public float LookTarget;
 
     //reference to the animator component to call IK functions
     protected Animator animator;
@@ -190,7 +189,7 @@ public class RG_IKDriver : MonoBehaviour
                             //rightHandObj = steeringSE;
                             leftHandObj = steeringNW;
                         }
-                        if (LookAtRoad)
+                        if (!(Math.Abs(LookTarget) > 0))
                             lookTargetPosX = defaultLookXPos + maxLookRight;
                         else
                             lookTargetPosX = defaultLookXPos;
@@ -221,7 +220,7 @@ public class RG_IKDriver : MonoBehaviour
                             //rightHandObj = steeringNE;
                             leftHandObj = steeringSW;
                         }
-                        if (LookAtRoad)
+                        if (!(Math.Abs(LookTarget) > 0))
                             lookTargetPosX = defaultLookXPos + maxLookLeft;
                         else
                             lookTargetPosX = defaultLookXPos;
@@ -235,10 +234,10 @@ public class RG_IKDriver : MonoBehaviour
                         leftHandObj = steeringW;
                         lookTargetPosX = defaultLookXPos;
 
-                        if (LookAtRoad)
+                        if (!(Math.Abs(LookTarget) > 0))
                             lookTargetPosY = defaultLookYPos;
                         else
-                            lookTargetPosY = defaultLookYPos + NewTarget;
+                            lookTargetPosY = defaultLookYPos + LookTarget;
 
                         if (Mathf.Approximately(lookPosition.x, lookTargetPosX) && Mathf.Approximately(lookPosition.y, lookTargetPosY))
                         {
