@@ -48,7 +48,6 @@ public class StartMenu : MonoBehaviour, IGvrGazeResponder
 
     private void StartGame()
     {
-        Debug.Log("start");
         SceneManager.LoadScene("protoScene");
     }
 
@@ -61,7 +60,6 @@ public class StartMenu : MonoBehaviour, IGvrGazeResponder
 
     private void QuitGame()
     {
-        Debug.Log("quit");
         Application.Quit();
     }
 
