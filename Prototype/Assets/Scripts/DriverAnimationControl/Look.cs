@@ -4,9 +4,14 @@ using System.Collections;
 
 public class Look : MonoBehaviour
 {
-
+    public enum LookState
+    {
+        Down = -1,
+        Straight = 0,
+        Up = 1
+    }
     private RG_IKDriver _driver;
-    public float Amount;
+    public LookState LookType;
     // Use this for initialization
     void Start()
     {
@@ -23,8 +28,7 @@ public class Look : MonoBehaviour
     {
         if (obj.gameObject.name == "car_body")
         {
-            _driver.LookAtRoad = !(Math.Abs(Amount) > 0);
-            _driver.NewTarget = Amount;
+            _driver.LookTarget = (float)LookType / 2;
         }
     }
 }
