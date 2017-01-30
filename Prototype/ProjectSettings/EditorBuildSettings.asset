@@ -9,5 +9,5 @@ EditorBuildSettings:
     path: Assets/startMenu.unity
   - enabled: 0
     path: Assets/test.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/mainScene.unity
