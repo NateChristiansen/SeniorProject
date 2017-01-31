@@ -89,11 +89,10 @@ public class RG_IKDriver : MonoBehaviour
     {
         transform.localPosition = avatarPosition;
         animator = GetComponent<Animator>();
-        animator.Play("CloseJaw");
+        animator.Play("Animate");
         lookTargetPosX = defaultLookXPos;
         lookTargetPosY = defaultLookYPos;
         TargetShifter();
-        animator.playbackTime = 0f;
     }
 
     private void Update()
