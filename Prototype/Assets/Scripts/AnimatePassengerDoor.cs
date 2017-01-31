@@ -12,15 +12,14 @@ public class AnimatePassengerDoor : MonoBehaviour, IGvrGazeResponder
     private bool down = false;
 
 	// Use this for initialization
-	void Start () {
-	
-	}
+	void Start ()
+    {
+    }
 	
 	// Update is called once per frame
 	void Update () 
     {
-        doorHandle.GetComponent<Animation>().wrapMode = WrapMode.Once;
-        doorWindow.GetComponent<Animation>().wrapMode = WrapMode.Once;
+
 	}
 
     public void OnGazeEnter()
@@ -56,5 +55,7 @@ public class AnimatePassengerDoor : MonoBehaviour, IGvrGazeResponder
             window.Play();
         }
         down = !down;
+        doorHandle.GetComponent<Animation>().wrapMode = WrapMode.Once;
+        doorWindow.GetComponent<Animation>().wrapMode = WrapMode.Once;
     }
 }
