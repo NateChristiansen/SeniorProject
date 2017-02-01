@@ -89,11 +89,10 @@ public class RG_IKDriver : MonoBehaviour
     {
         transform.localPosition = avatarPosition;
         animator = GetComponent<Animator>();
-        animator.Play("CloseJaw");
+        animator.Play("Animate");
         lookTargetPosX = defaultLookXPos;
         lookTargetPosY = defaultLookYPos;
         TargetShifter();
-        animator.playbackTime = 0f;
     }
 
     private void Update()
@@ -128,8 +127,8 @@ public class RG_IKDriver : MonoBehaviour
         shifting = true;
         targetRightHandIK = shiftObj;
         leftFootObj = leftFootClutch;
-        //Invoke("TargetWheel", 0.35f);
-        //Invoke("LeftFootIdle", 0.5f);
+        Invoke("TargetWheel", 0.35f);
+        Invoke("LeftFootIdle", 0.5f);
     }
 
     public void LeftFootIdle()
@@ -145,30 +144,30 @@ public class RG_IKDriver : MonoBehaviour
             {
                 if (lookObj != null)
                 {
-                    //animator.SetLookAtWeight(1);
-                    //animator.SetLookAtPosition(lookObj.position);
+                    animator.SetLookAtWeight(1);
+                    animator.SetLookAtPosition(lookObj.position);
                 }
                 if (rightHandObj != null)
                 {
-                    //animator.SetIKPositionWeight(AvatarIKGoal.LeftHand, 1);
-                    //animator.SetIKRotationWeight(AvatarIKGoal.LeftHand, 1);
-                    //animator.SetIKPosition(AvatarIKGoal.LeftHand, targetLeftHandIK.position);
-                    //animator.SetIKRotation(AvatarIKGoal.LeftHand, targetLeftHandIK.rotation);
-                    //
-                    //animator.SetIKPositionWeight(AvatarIKGoal.RightHand, 1);
-                    //animator.SetIKRotationWeight(AvatarIKGoal.RightHand, 1);
-                    //animator.SetIKPosition(AvatarIKGoal.RightHand, targetRightHandIK.position);
-                    //animator.SetIKRotation(AvatarIKGoal.RightHand, targetRightHandIK.rotation);
-                    //
-                    //animator.SetIKPositionWeight(AvatarIKGoal.LeftFoot, 1);
-                    //animator.SetIKRotationWeight(AvatarIKGoal.LeftFoot, 1);
-                    //animator.SetIKPosition(AvatarIKGoal.LeftFoot, targetLeftFootIK.position);
-                    //animator.SetIKRotation(AvatarIKGoal.LeftFoot, targetLeftFootIK.rotation);
-                    //
-                    //animator.SetIKPositionWeight(AvatarIKGoal.RightFoot, 1);
-                    //animator.SetIKRotationWeight(AvatarIKGoal.RightFoot, 1);
-                    //animator.SetIKPosition(AvatarIKGoal.RightFoot, targetRightFootIK.position);
-                    //animator.SetIKRotation(AvatarIKGoal.RightFoot, targetRightFootIK.rotation);
+                    animator.SetIKPositionWeight(AvatarIKGoal.LeftHand, 1);
+                    animator.SetIKRotationWeight(AvatarIKGoal.LeftHand, 1);
+                    animator.SetIKPosition(AvatarIKGoal.LeftHand, targetLeftHandIK.position);
+                    animator.SetIKRotation(AvatarIKGoal.LeftHand, targetLeftHandIK.rotation);
+                    
+                    animator.SetIKPositionWeight(AvatarIKGoal.RightHand, 1);
+                    animator.SetIKRotationWeight(AvatarIKGoal.RightHand, 1);
+                    animator.SetIKPosition(AvatarIKGoal.RightHand, targetRightHandIK.position);
+                    animator.SetIKRotation(AvatarIKGoal.RightHand, targetRightHandIK.rotation);
+                    
+                    animator.SetIKPositionWeight(AvatarIKGoal.LeftFoot, 1);
+                    animator.SetIKRotationWeight(AvatarIKGoal.LeftFoot, 1);
+                    animator.SetIKPosition(AvatarIKGoal.LeftFoot, targetLeftFootIK.position);
+                    animator.SetIKRotation(AvatarIKGoal.LeftFoot, targetLeftFootIK.rotation);
+                    
+                    animator.SetIKPositionWeight(AvatarIKGoal.RightFoot, 1);
+                    animator.SetIKRotationWeight(AvatarIKGoal.RightFoot, 1);
+                    animator.SetIKPosition(AvatarIKGoal.RightFoot, targetRightFootIK.position);
+                    animator.SetIKRotation(AvatarIKGoal.RightFoot, targetRightFootIK.rotation);
 
 
                     lookPosition = lookObj.localPosition;
