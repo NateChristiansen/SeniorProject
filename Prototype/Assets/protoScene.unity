@@ -1829,7 +1829,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!23 &124539023
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1885,12 +1885,12 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 124539022}
   m_LocalRotation: {x: -0, y: 0.71286356, z: -0, w: 0.70130277}
-  m_LocalPosition: {x: 1971, y: 10.5, z: 3178}
+  m_LocalPosition: {x: -786.03125, y: 29.742188, z: 42.600098}
   m_LocalScale: {x: 60, y: 5, z: 5}
   m_LocalEulerAnglesHint: {x: 0, y: 90.909004, z: 0}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_Father: {fileID: 826077370}
+  m_RootOrder: 2
 --- !u!114 &124539027
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11841,8 +11841,9 @@ Transform:
   m_Children:
   - {fileID: 13569831}
   - {fileID: 424293414}
+  - {fileID: 124539026}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
 --- !u!1 &828306050
 GameObject:
   m_ObjectHideFlags: 0
@@ -20177,7 +20178,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
 --- !u!1001 &1218726713
 Prefab:
   m_ObjectHideFlags: 0
