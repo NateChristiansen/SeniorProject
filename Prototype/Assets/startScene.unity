@@ -6700,8 +6700,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HorizontalInput: 0
   VerticalInput: 0
-  LookAtRoad: 1
-  NewTarget: 0
+  LookTarget: 0
   lookTargetPosY: 0
   defaultLookXPos: -0.36
   maxLookRight: 1
@@ -11469,11 +11468,11 @@ GameObject:
   m_Component:
   - 4: {fileID: 606756100}
   - 33: {fileID: 606756103}
-  - 64: {fileID: 606756102}
   - 23: {fileID: 606756101}
+  - 65: {fileID: 606756102}
   m_Layer: 0
   m_Name: FrontTunnelBlock
-  m_TagString: Untagged
+  m_TagString: frontTunnelBlock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11485,7 +11484,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 606756099}
   m_LocalRotation: {x: 0, y: 0.7071068, z: -0.7071068, w: 0}
-  m_LocalPosition: {x: -146, y: 146.6, z: 1835}
+  m_LocalPosition: {x: -146, y: 196, z: 1144}
   m_LocalScale: {x: 40, y: 40.000015, z: 40.000015}
   m_LocalEulerAnglesHint: {x: 90, y: 180, z: 0}
   m_Children: []
@@ -11520,18 +11519,18 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!64 &606756102
-MeshCollider:
+--- !u!65 &606756102
+BoxCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 606756099}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Convex: 0
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+  m_Size: {x: 10, y: 2.2204459e-16, z: 9.999999}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &606756103
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -24109,7 +24108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ea1ffe0e00e2fe4986bf25438d11058, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Amount: 0
+  LookType: 0
 --- !u!1 &1152096918
 GameObject:
   m_ObjectHideFlags: 0
@@ -29005,8 +29004,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HorizontalInput: 0
   VerticalInput: 0
-  LookAtRoad: 1
-  NewTarget: 0
+  LookTarget: 0
   lookTargetPosY: 0
   defaultLookXPos: -0.36
   maxLookRight: 1
@@ -31143,6 +31141,93 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1484659598}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1488528000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1488528005}
+  - 20: {fileID: 1488528004}
+  - 124: {fileID: 1488528003}
+  - 92: {fileID: 1488528002}
+  - 81: {fileID: 1488528001}
+  m_Layer: 0
+  m_Name: DarkCamera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!81 &1488528001
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1488528000}
+  m_Enabled: 1
+--- !u!92 &1488528002
+Behaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1488528000}
+  m_Enabled: 1
+--- !u!124 &1488528003
+Behaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1488528000}
+  m_Enabled: 1
+--- !u!20 &1488528004
+Camera:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1488528000}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 0
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+  m_StereoMirrorMode: 0
+--- !u!4 &1488528005
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1488528000}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 314.83582, y: 303, z: 2205.8396}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
 --- !u!1 &1488782030
 GameObject:
   m_ObjectHideFlags: 0
@@ -32016,9 +32101,10 @@ GameObject:
   - 54: {fileID: 1526992568}
   - 114: {fileID: 1526992566}
   - 114: {fileID: 1526992567}
+  - 114: {fileID: 1526992570}
   m_Layer: 0
   m_Name: Vehicle
-  m_TagString: Untagged
+  m_TagString: car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32047,6 +32133,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 1000
+  SetStart: 0
 --- !u!54 &1526992568
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -32071,7 +32158,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1526992565}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 793, y: 8.6, z: 1395}
+  m_LocalPosition: {x: 793, y: 0, z: 1395}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 89.186005, z: 0}
   m_Children:
@@ -32083,6 +32170,19 @@ Transform:
   - {fileID: 1285710574}
   m_Father: {fileID: 0}
   m_RootOrder: 2
+--- !u!114 &1526992570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1526992565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4991c7bc740a2f1439bf02dd34ff7b50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MainCamera: {fileID: 1736545289}
+  DarkCamera: {fileID: 1488528000}
 --- !u!1 &1528589827
 GameObject:
   m_ObjectHideFlags: 0
@@ -50012,7 +50112,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1997029819}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -146, y: 146.6, z: -1322}
+  m_LocalPosition: {x: -146, y: 146.6, z: -727}
   m_LocalScale: {x: 40, y: 40.000015, z: 40.000015}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
   m_Children: []

@@ -5,6 +5,7 @@ public class CarControllerTunnel : MonoBehaviour {
 
     public float Speed;
 
+    public bool SetStart;
 	// Use this for initialization
 	void Start () 
     {
@@ -14,12 +15,25 @@ public class CarControllerTunnel : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
 	{
-	    float step = Speed*Time.deltaTime;
-	    transform.position = Vector3.MoveTowards(transform.position, GameObject.Find("endpos").transform.position, step);
+	    if (!SetStart)
+	    {
+            float step = Speed * Time.deltaTime;
+            transform.position = Vector3.MoveTowards(transform.position, GameObject.Find("endpos").transform.position, step); 
+	    }
+	    else
+	    {
+	        DriveIntoExit();
+	    }
 	}
 
     void OnTriggerEnter(Collider col)
     {
         transform.position = GameObject.Find("startpos").transform.position;
+    }
+
+    public void DriveIntoExit()
+    {
+        float step = Speed * Time.deltaTime;
+        transform.position = Vector3.MoveTowards(transform.position, new Vector3(793f, 0f, 5000), step);
     }
 }

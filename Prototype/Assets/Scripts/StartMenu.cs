@@ -33,7 +33,8 @@ public class StartMenu : MonoBehaviour, IGvrGazeResponder
     {
         if (gameObject.tag.Equals("beginExperienceSelection"))
         {
-            StartGame();
+            DetachTunnelExit();
+            GameObject.Find("Vehicle").gameObject.GetComponent<CarControllerTunnel>().SetStart = true;
         }
         else if (gameObject.tag.Equals("optionsSelection"))
         {
@@ -46,7 +47,13 @@ public class StartMenu : MonoBehaviour, IGvrGazeResponder
         }
     }
 
-    private void StartGame()
+    private void DetachTunnelExit()
+    {
+        var child = GameObject.Find("FrontTunnelBlock").transform;
+        child.gameObject.transform.parent = null;
+    }
+
+    public void StartGame()
     {
         SceneManager.LoadScene("protoScene");
     }
