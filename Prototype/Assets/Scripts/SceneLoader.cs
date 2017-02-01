@@ -4,8 +4,10 @@ using System.Collections;
 public class SceneLoader : MonoBehaviour {
 
 	// Use this for initialization
-    public GameObject MainCamera;
-    public GameObject DarkCamera;
+    public Camera MainCamera;
+    public Camera DarkCamera;
+
+    private bool trigger = false;
 	void Start () {
 	
 	}
@@ -17,9 +19,16 @@ public class SceneLoader : MonoBehaviour {
 
     void OnTriggerEnter(Collider col)
     {
-        if (col.gameObject.tag.Equals("frontTunnelBlock"))
+        if (col.gameObject.tag.Equals("frontTunnelBlock") && !trigger)
         {
+
+            var child = GameObject.FindGameObjectWithTag("mainCamera").transform;
+            child.gameObject.transform.parent = null;
+            MainCamera.transform.position = GameObject.Find("tempPos").transform.position;
+            MainCamera.transform.rotation = GameObject.Find("tempPos").transform.rotation;
             GameObject.Find("BeginExperience").gameObject.GetComponent<StartMenu>().StartGame();
+
+            trigger = true;
         }
 
     }

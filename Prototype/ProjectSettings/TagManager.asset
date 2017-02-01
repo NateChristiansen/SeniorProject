@@ -9,6 +9,7 @@ TagManager:
   - beginExperienceSelection
   - car
   - frontTunnelBlock
+  - mainCamera
   layers:
   - Default
   - TransparentFX
