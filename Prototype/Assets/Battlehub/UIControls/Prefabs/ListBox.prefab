@@ -519,7 +519,7 @@ MonoBehaviour:
   MultiselectKey: 306
   RangeselectKey: 304
   RemoveKey: 127
-  AllowDragAndDrop: 1
+  CanDrag: 1
   ItemContainerPrefab: {fileID: 192638, guid: cdab80d5844bfba4283bfd85412234b3, type: 2}
   Panel: {fileID: 22409888}
   Camera: {fileID: 0}

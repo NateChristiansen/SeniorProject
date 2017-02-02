@@ -346,6 +346,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8f760902d873bb4e945141eeb5f11b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CanDrag: 1
 --- !u!114 &11475918
 MonoBehaviour:
   m_ObjectHideFlags: 1

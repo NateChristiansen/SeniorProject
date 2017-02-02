@@ -2820,17 +2820,18 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 11490992}
-        m_MethodName: 5570646174654c61796f7574
+        m_MethodName: UpdateLayout
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 556e697479456e67696e652e4f626a6563742c20556e697479456e67696e65
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: 556e697479456e67696e652e4576656e74732e556e6974794576656e742c20556e697479456e67696e652c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
   Camera: {fileID: 0}
 --- !u!114 &11417498
 MonoBehaviour:
@@ -4553,12 +4554,13 @@ MonoBehaviour:
   Opened:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 556e697479456e67696e652e4576656e74732e556e6974794576656e742c20556e697479456e67696e652c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
   Closed:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_MethodName: 4f6e436c6f736564
+        m_MethodName: OnClosed
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4568,7 +4570,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: 556e697479456e67696e652e4576656e74732e556e6974794576656e742c20556e697479456e67696e652c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
   Prefabs: []
   Grid: {fileID: 139590}
   SceneGizmo: {fileID: 155038}
@@ -4798,7 +4801,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65b6ea937152d534a838621b5bcff7e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Id: 436f6d6d616e6473
+  Id: Commands
 --- !u!114 &11448386
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -7041,47 +7044,50 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 11464816}
-        m_MethodName: 4c6f636b496e707574
+        m_MethodName: LockInput
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 556e697479456e67696e652e4f626a6563742c20556e697479456e67696e65
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: 556e697479456e67696e652e4576656e74732e556e6974794576656e742c20556e697479456e67696e652c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
   OrientationChanged:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 11464816}
-        m_MethodName: 556e6c6f636b496e707574
+        m_MethodName: UnlockInput
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 556e697479456e67696e652e4f626a6563742c20556e697479456e67696e65
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: 556e697479456e67696e652e4576656e74732e556e6974794576656e742c20556e697479456e67696e652c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
   ProjectionChanged:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 11464816}
-        m_MethodName: 4f6e50726f6a656374696f6e4368616e676564
+        m_MethodName: OnProjectionChanged
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 556e697479456e67696e652e4f626a6563742c20556e697479456e67696e65
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: 556e697479456e67696e652e4576656e74732e556e6974794576656e742c20556e697479456e67696e652c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!114 &11491158
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -7546,16 +7552,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TreeViewPrefab: {fileID: 110726, guid: 741f31daca5ff07498d227214325f62e, type: 2}
-  DisabledItemColor:
-    r: 0.5
-    g: 0.5
-    b: 0.5
-    a: 1
-  EnabledItemColor:
-    r: 0.2
-    g: 0.2
-    b: 0.2
-    a: 1
+  DisabledItemColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  EnabledItemColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
 --- !u!114 &11498884
 MonoBehaviour:
   m_ObjectHideFlags: 1

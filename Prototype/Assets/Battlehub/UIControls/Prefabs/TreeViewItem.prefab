@@ -200,7 +200,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c94c2cbc2e8fef64bb18422221ff1b7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnGraphic: {fileID: 11476480}
   OffGraphic: {fileID: 11492158}
 --- !u!114 &11439956
 MonoBehaviour:
@@ -213,6 +212,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d584b0ac80aab2240964657f9312f506, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CanDrag: 1
   m_itemLayout: {fileID: 11476104}
 --- !u!114 &11440566
 MonoBehaviour:
