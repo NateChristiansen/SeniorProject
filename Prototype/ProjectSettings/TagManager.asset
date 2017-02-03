@@ -10,6 +10,7 @@ TagManager:
   - car
   - frontTunnelBlock
   - mainCamera
+  - Fire
   layers:
   - Default
   - TransparentFX
@@ -19,7 +20,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - UnaffectedByLight
   - 
   - 
   - 
