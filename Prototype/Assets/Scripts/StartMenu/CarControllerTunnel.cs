@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Runtime.InteropServices;
 
 public class CarControllerTunnel : MonoBehaviour {
 
@@ -28,13 +29,17 @@ public class CarControllerTunnel : MonoBehaviour {
 
     void OnTriggerEnter(Collider col)
     {
+        if (SetStart) return; // need to stop this from triggering if the game is ready to start
+
         if (col.gameObject.name == "endpos")
             transform.position = GameObject.Find("startpos").transform.position;
     }
 
     public void DriveIntoExit()
     {
+
+        Transform tunnelBlock = GameObject.Find("FrontTunnelBlock").gameObject.transform; // location of darkness to drive into
         float step = Speed * Time.deltaTime;
-        transform.position = Vector3.MoveTowards(transform.position, new Vector3(793f, 0f, 5000), step);
+        transform.position = Vector3.MoveTowards(transform.position, new Vector3(tunnelBlock.position.x + 150f, 0f, tunnelBlock.position.z), step); // car moves towards it
     }
 }
