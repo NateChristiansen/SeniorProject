@@ -89,7 +89,6 @@ public class RG_IKDriver : MonoBehaviour
     {
         transform.localPosition = avatarPosition;
         animator = GetComponent<Animator>();
-        animator.Play("Animate");
         lookTargetPosX = defaultLookXPos;
         lookTargetPosY = defaultLookYPos;
         TargetShifter();
