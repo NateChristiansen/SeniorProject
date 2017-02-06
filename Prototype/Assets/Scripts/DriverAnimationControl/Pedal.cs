@@ -4,12 +4,8 @@ using System.Collections.Generic;
 
 public class Pedal : MonoBehaviour
 {
-    public enum FootState
-    {
-        Gas = 1, Brake = -1, Idle = 0
-    }
-
-    public FootState FootType;
+    
+    public RG_IKDriver.FootState FootType;
     private RG_IKDriver _driver;
     // Use this for initialization
     void Start()
@@ -27,7 +23,7 @@ public class Pedal : MonoBehaviour
     {
         if (obj.gameObject.name == "car_body")
         {
-            _driver.VerticalInput = (int) FootType;
+            _driver.FootPosition = FootType;
         }
     }
 }

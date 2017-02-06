@@ -10,10 +10,28 @@ using Random = UnityEngine.Random;
 [RequireComponent(typeof (Animator))]
 public class RG_IKDriver : MonoBehaviour
 {
-    public int HorizontalInput = 0;
-    public int VerticalInput = 0;
-    
-    public float LookTarget;
+    public enum FootState
+    {
+        Gas = 1, Brake = -1, Idle = 0
+    }
+    public enum TurnState
+    {
+        BigLeft = -2,
+        Left = -1,
+        Straight = 0,
+        Right = 1,
+        BigRight = 2
+    }
+    public enum LookState
+    {
+        Down = -1,
+        Straight = 0,
+        Up = 1
+    }
+
+    public TurnState TurnType = TurnState.Straight;
+    public FootState FootPosition = FootState.Idle;
+    public LookState LookTarget = LookState.Down;
 
     //reference to the animator component to call IK functions
     protected Animator animator;
@@ -87,6 +105,7 @@ public class RG_IKDriver : MonoBehaviour
 
     private void Start()
     {
+        LookTarget = LookState.Down;
         transform.localPosition = avatarPosition;
         animator = GetComponent<Animator>();
         lookTargetPosX = defaultLookXPos;
@@ -168,17 +187,19 @@ public class RG_IKDriver : MonoBehaviour
                     animator.SetIKPosition(AvatarIKGoal.RightFoot, targetRightFootIK.position);
                     animator.SetIKRotation(AvatarIKGoal.RightFoot, targetRightFootIK.rotation);
 
+                    if (lookObj != null)
+                        lookPosition = lookObj.localPosition;
 
-                    lookPosition = lookObj.localPosition;
+                    var lookTarget = ((float) LookTarget)/2;
 
-                    if (HorizontalInput > 0)
+                    if (TurnType > 0)
                     {
-                        if (horizontalInput == 2)
+                        if (TurnType == TurnState.BigRight)
                         {
                             //rightHandObj = steeringSW;
                             leftHandObj = steeringNE;
                         }
-                        else if (HorizontalInput == 1)
+                        else if (TurnType == TurnState.Right)
                         {
                             //rightHandObj = steeringS;
                             leftHandObj = steeringN;
@@ -188,7 +209,7 @@ public class RG_IKDriver : MonoBehaviour
                             //rightHandObj = steeringSE;
                             leftHandObj = steeringNW;
                         }
-                        if (!(Math.Abs(LookTarget) > 0))
+                        if (LookTarget == LookState.Straight)
                             lookTargetPosX = defaultLookXPos + maxLookRight;
                         else
                             lookTargetPosX = defaultLookXPos;
@@ -202,14 +223,14 @@ public class RG_IKDriver : MonoBehaviour
                             lookObjMoveSpeed = Mathf.Lerp(lookObjMoveSpeed, maxLookSpeed, 1 * Time.deltaTime);
                         }
                     }
-                    else if (HorizontalInput < 0)
+                    else if (TurnType < 0)
                     {
-                        if (HorizontalInput == -2)
+                        if (TurnType == TurnState.BigLeft)
                         {
                             //rightHandObj = steeringNW;
                             leftHandObj = steeringSE;
                         }
-                        else if (HorizontalInput == 1)
+                        else if (TurnType == TurnState.Left)
                         {
                             //rightHandObj = steeringN;
                             leftHandObj = steeringS;
@@ -219,7 +240,7 @@ public class RG_IKDriver : MonoBehaviour
                             //rightHandObj = steeringNE;
                             leftHandObj = steeringSW;
                         }
-                        if (!(Math.Abs(LookTarget) > 0))
+                        if (LookTarget == LookState.Straight)
                             lookTargetPosX = defaultLookXPos + maxLookLeft;
                         else
                             lookTargetPosX = defaultLookXPos;
@@ -233,10 +254,10 @@ public class RG_IKDriver : MonoBehaviour
                         leftHandObj = steeringW;
                         lookTargetPosX = defaultLookXPos;
 
-                        if (!(Math.Abs(LookTarget) > 0))
+                        if (LookTarget == LookState.Straight)
                             lookTargetPosY = defaultLookYPos;
                         else
-                            lookTargetPosY = defaultLookYPos + LookTarget;
+                            lookTargetPosY = defaultLookYPos + lookTarget;
 
                         if (Mathf.Approximately(lookPosition.x, lookTargetPosX) && Mathf.Approximately(lookPosition.y, lookTargetPosY))
                         {
@@ -257,11 +278,11 @@ public class RG_IKDriver : MonoBehaviour
                     //    lookTargetPosY = lookObj.position.y;
                     //}
 
-                    if (VerticalInput > 0)
+                    if (FootPosition == FootState.Gas)
                     {
                         rightFootObj = rightFootGas;
                     }
-                    else if (VerticalInput < 0)
+                    else if (FootPosition == FootState.Brake)
                     {
                         rightFootObj = rightFootBrake;
                     }
@@ -294,7 +315,9 @@ public class RG_IKDriver : MonoBehaviour
                     }
                     lookPosition.x = Mathf.Lerp(lookPosition.x, lookTargetPosX, lookObjMoveSpeed*Time.deltaTime);
                     lookPosition.y = Mathf.Lerp(lookPosition.y, lookTargetPosY, lookObjMoveSpeed*Time.deltaTime);
-                    lookObj.localPosition = lookPosition;
+
+                    if (lookObj != null)
+                        lookObj.localPosition = lookPosition;
                 }
             }
         }

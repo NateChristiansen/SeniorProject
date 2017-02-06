@@ -4,16 +4,7 @@ using System.Collections.Generic;
 
 public class Turn : MonoBehaviour
 {
-    public enum TurnState
-    {
-        BigLeft = -2,
-        Left = -1,
-        Straight = 0,
-        Right = 1,
-        BigRight = 2
-    }
-
-    public TurnState TurnType;
+    public RG_IKDriver.TurnState TurnType;
 
     private RG_IKDriver _driver;
     // Use this for initialization
@@ -31,7 +22,7 @@ public class Turn : MonoBehaviour
     {
         if (obj.gameObject.name == "car_body")
         {
-            _driver.HorizontalInput = (int) TurnType;
+            _driver.TurnType = TurnType;
         }
     }
 }

@@ -32,7 +32,6 @@ public class Recenter : MonoBehaviour {
                 if (touch.tapCount == 2)
                 {
                     gvr.Recenter();
-                    Debug.Log("fffffff");
                 }
             }
         }
