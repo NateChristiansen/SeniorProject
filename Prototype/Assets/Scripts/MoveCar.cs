@@ -9,6 +9,7 @@ public class MoveCar : MonoBehaviour
     public Spline Path;
     public float Speed;
     private float t;
+    public bool Loop;
 
     // Use this for initialization
     void Start()
@@ -20,7 +21,7 @@ public class MoveCar : MonoBehaviour
     void Update()
     {
         t += Speed * Time.deltaTime;
-        if (t > 1) t = 0;
+        if (t > 1f && Loop) t = 0;
         var point = Path.GetPoint(t);
         var direction = Path.GetDirection(t);
         gameObject.transform.position = point;
