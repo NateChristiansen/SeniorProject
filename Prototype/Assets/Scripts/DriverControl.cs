@@ -5,19 +5,18 @@ using System;
 public class DriverControl : MonoBehaviour, IGvrGazeResponder
 {
     public RG_IKDriver Driver;
-    private bool isLooking;
-    private double time;
-    private double scoretime = GlobalValues.ScoreTick;
+    private bool _isLooking;
+    private double _time;
     public void OnGazeEnter()
     {
         Driver.LookTarget = RG_IKDriver.LookState.Straight;
-        isLooking = true;
+        _isLooking = true;
     }
 
     public void OnGazeExit()
     {
-        isLooking = false;
-        time = 2;
+        _isLooking = false;
+        _time = 2;
     }
 
     public void OnGazeTrigger()
@@ -31,26 +30,13 @@ public class DriverControl : MonoBehaviour, IGvrGazeResponder
 	
 	// Update is called once per frame
 	void Update () {
-	    if (!isLooking && time > 0)
+	    if (!_isLooking && _time > 0)
 	    {
-	        time -= Time.deltaTime;
-            if (time <= 0)
+	        _time -= Time.deltaTime;
+            if (_time <= 0)
             {
                 Driver.LookTarget = RG_IKDriver.LookState.Down;
             }
-        }
-	    if (scoretime > 0)
-	    {
-	        scoretime -= Time.deltaTime;
-	    }
-	    else
-        {
-            if (Driver.LookTarget == RG_IKDriver.LookState.Down)
-                GlobalValues.Score += 1;
-            else
-                GlobalValues.Score -= 2;
-            scoretime = GlobalValues.ScoreTick;
-            Debug.Log(GlobalValues.Score);
         }
 	}
 }
