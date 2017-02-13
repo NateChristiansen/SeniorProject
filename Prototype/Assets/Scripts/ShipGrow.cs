@@ -15,7 +15,7 @@ public class ShipGrow : MonoBehaviour {
 	    if (Activate)
 	    {
             if (Rocket.localScale.x < ScaleTo)
-	            Rocket.localScale += new Vector3(Time.deltaTime * 10, Time.deltaTime * 10, Time.deltaTime * 10);
+	            Rocket.localScale += new Vector3(Time.deltaTime * 5, Time.deltaTime * 5, Time.deltaTime * 5);
             else
                 Rocket.localScale = new Vector3(ScaleTo, ScaleTo, ScaleTo);
 	    }
