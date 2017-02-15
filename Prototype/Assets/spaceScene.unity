@@ -487,7 +487,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdd0031789a6fa240978ffc9df19cbc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_persistentVersions: 9800000000000000
+  m_persistentVersions: 9c00000000000000
   m_modes: 0200000002000000020000000200000002000000
   m_points:
   - {x: 0, y: 0, z: 0}
@@ -1381,6 +1381,16 @@ Prefab:
     - target: {fileID: 4000010442678170, guid: 7000f4e28520ca54ea38212bdf665db4, type: 2}
       propertyPath: m_RootOrder
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 82000013637510882, guid: 7000f4e28520ca54ea38212bdf665db4,
+        type: 2}
+      propertyPath: spreadCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 82000013637510882, guid: 7000f4e28520ca54ea38212bdf665db4,
+        type: 2}
+      propertyPath: m_Volume
+      value: 0.251
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7000f4e28520ca54ea38212bdf665db4, type: 2}
@@ -4690,7 +4700,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdd0031789a6fa240978ffc9df19cbc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_persistentVersions: bf01000000000000
+  m_persistentVersions: c301000000000000
   m_modes: 0200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000
   m_points:
   - {x: 0, y: 0, z: 0}
