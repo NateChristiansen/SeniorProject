@@ -16,15 +16,8 @@ public class CarControllerTunnel : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
 	{
-        if (!SetStart)
-        {
-            float step = Speed * Time.deltaTime;
-            transform.position = Vector3.MoveTowards(transform.position, GameObject.Find("endpos").transform.position, step); 
-	    }
-        else
-        {
+        if (SetStart)
             DriveIntoExit();
-        }
 	}
 
     void OnTriggerEnter(Collider col)

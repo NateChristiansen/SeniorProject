@@ -33,6 +33,7 @@ public class StartMenu : MonoBehaviour, IGvrGazeResponder
     {
         if (gameObject.tag.Equals("beginExperienceSelection"))
         {
+            GameObject.Find("Vehicle").gameObject.GetComponent<MoveCar>().enabled = false;
             DetachTunnelExit();
             GameObject.Find("Vehicle").gameObject.GetComponent<CarControllerTunnel>().SetStart = true;
         }
