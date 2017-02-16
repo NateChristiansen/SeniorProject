@@ -4,7 +4,6 @@ using Battlehub.SplineEditor;
 
 public class CarSwerve : MonoBehaviour
 {
-    public Spline OriginalPath, BranchingPath;
     public MoveCar CarPath;
     public RG_IKDriver Driver;
 	// Use this for initialization
@@ -21,7 +20,7 @@ public class CarSwerve : MonoBehaviour
     {
         if (Driver.LookTarget == RG_IKDriver.LookState.Straight)
         {
-            CarPath.Path = BranchingPath;
+            CarPath.LookingStraight = true;
         }
     }
 }
