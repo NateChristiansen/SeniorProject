@@ -5,6 +5,7 @@ public class CarContinue : MonoBehaviour
 {
     public StopCar Stopper;
     public DriverControl Controller;
+    public ShipGrow Grow;
     // Use this for initialization
     void Start () {
 	
@@ -19,5 +20,8 @@ public class CarContinue : MonoBehaviour
     {
         Stopper.Continue = true;
         Controller.SolvedScenario = false;
+        Grow.Grow = false;
+        Grow.ScaleTo = 0;
+        Grow.Activate = true;
     }
 }
