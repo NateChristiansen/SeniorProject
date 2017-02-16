@@ -138,12 +138,16 @@ public class MoveCar : MonoBehaviour
         if (m_spline.HasBranches(pointIndex))
         {
             ForkEventArgs args = new ForkEventArgs(m_spline, pointIndex);
+            if (args.Branches.Length > 0)
+            {
+                args.SelectBranchIndex = 0;
+            }
             if (args.SelectBranchIndex > -1 && LookingStraight)
             {
                 m_spline = args.Branches[0];
                 m_t = 0.0f;
                 m_curveIndex = 0;
-                LookingStraight = false;
+                //LookingStraight = false;
             }
         }
     }
