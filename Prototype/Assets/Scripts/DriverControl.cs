@@ -7,6 +7,8 @@ public class DriverControl : MonoBehaviour, IGvrGazeResponder
     public RG_IKDriver Driver;
     [HideInInspector]
     public bool IsLooking;
+    [HideInInspector]
+    public bool SolvedScenario = false;
     private double _time;
     public void OnGazeEnter()
     {
@@ -31,7 +33,7 @@ public class DriverControl : MonoBehaviour, IGvrGazeResponder
 	
 	// Update is called once per frame
 	void Update () {
-	    if (!IsLooking && _time > 0)
+	    if (!(IsLooking || SolvedScenario) && _time > 0)
 	    {
 	        _time -= Time.deltaTime;
             if (_time <= 0)

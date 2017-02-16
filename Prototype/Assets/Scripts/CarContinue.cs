@@ -4,8 +4,9 @@ using System.Collections;
 public class CarContinue : MonoBehaviour
 {
     public StopCar Stopper;
-	// Use this for initialization
-	void Start () {
+    public DriverControl Controller;
+    // Use this for initialization
+    void Start () {
 	
 	}
 	
@@ -17,5 +18,6 @@ public class CarContinue : MonoBehaviour
     void OnTriggerEnter(Collider col)
     {
         Stopper.Continue = true;
+        Controller.SolvedScenario = false;
     }
 }

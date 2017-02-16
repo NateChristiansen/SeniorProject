@@ -15,8 +15,6 @@ public class MoveCar : MonoBehaviour
     public float Offset;
     public bool IsRunning = true;
     public bool IsLoop = false;
-    public ForkEvent Fork;
-    public UnityEvent Completed;
 
     private SplineBase m_spline;
     private bool m_isRunning;
@@ -109,7 +107,6 @@ public class MoveCar : MonoBehaviour
                     m_isCompleted = true;
                     IsRunning = false;
                     m_isRunning = false;
-                    Completed.Invoke();
                 }
 
                 if (IsLoop)

@@ -32,7 +32,7 @@ public class StopCar : MonoBehaviour
         if (Driver.LookTarget == RG_IKDriver.LookState.Straight)
         {
             Stop = true;
-            Controller.IsLooking = true;
+            Controller.SolvedScenario = true;
         }
     }
 }
