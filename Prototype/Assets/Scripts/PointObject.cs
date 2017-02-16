@@ -7,6 +7,7 @@ public class PointObject : MonoBehaviour, IGvrGazeResponder
     private bool _triggered;
     private AudioSource _clip;
     private bool _collected;
+    public float RotationDegreesPerSecond = 45;
 	// Use this for initialization
 	void Start ()
 	{
@@ -14,7 +15,9 @@ public class PointObject : MonoBehaviour, IGvrGazeResponder
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+	{
+	    transform.Rotate(0, RotationDegreesPerSecond*Time.deltaTime, 0);
 	    if (_collected && !_clip.isPlaying)
 	    {
             Destroy(gameObject);
