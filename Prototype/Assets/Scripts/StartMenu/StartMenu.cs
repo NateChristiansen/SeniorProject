@@ -6,6 +6,7 @@ public class StartMenu : MonoBehaviour, IGvrGazeResponder
 {
 
     private AsyncOperation _async;
+    public string SceneToLoadOnStart;
 	// Use this for initialization
 
 	void Start ()
@@ -56,7 +57,7 @@ public class StartMenu : MonoBehaviour, IGvrGazeResponder
 
     public void StartGame()
     {
-        SceneManager.LoadScene("protoScene");
+        SceneManager.LoadScene(SceneToLoadOnStart);
     }
 
     IEnumerator Load()
