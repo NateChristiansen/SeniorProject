@@ -4770,7 +4770,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdd0031789a6fa240978ffc9df19cbc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_persistentVersions: 2600000000000000
+  m_persistentVersions: 2800000000000000
   m_modes: 0000000000000000
   m_points:
   - {x: 0, y: 0, z: 0}
@@ -4821,7 +4821,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdd0031789a6fa240978ffc9df19cbc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_persistentVersions: 2600000000000000
+  m_persistentVersions: 2800000000000000
   m_modes: 0000000000000000
   m_points:
   - {x: 0, y: 0, z: 0}
@@ -14170,6 +14170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b132418c7ac9fd4b81bc3048d4cd8b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SceneToLoadOnStart: 
 --- !u!1 &664211452
 GameObject:
   m_ObjectHideFlags: 0
@@ -17697,7 +17698,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdd0031789a6fa240978ffc9df19cbc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_persistentVersions: 2d00000000000000
+  m_persistentVersions: 2f00000000000000
   m_modes: 0000000000000000
   m_points:
   - {x: 0, y: 0, z: 0}
@@ -20483,7 +20484,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdd0031789a6fa240978ffc9df19cbc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_persistentVersions: 2600000000000000
+  m_persistentVersions: 2800000000000000
   m_modes: 0000000000000000
   m_points:
   - {x: 0, y: 0, z: 0}
@@ -21094,6 +21095,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b132418c7ac9fd4b81bc3048d4cd8b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SceneToLoadOnStart: lavaScene
 --- !u!1 &872613228
 GameObject:
   m_ObjectHideFlags: 0
@@ -21539,7 +21541,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdd0031789a6fa240978ffc9df19cbc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_persistentVersions: 2600000000000000
+  m_persistentVersions: 2800000000000000
   m_modes: 0000000000000000
   m_points:
   - {x: 0, y: 0, z: 0}
@@ -43477,7 +43479,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdd0031789a6fa240978ffc9df19cbc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_persistentVersions: 7600000000000000
+  m_persistentVersions: 7800000000000000
   m_modes: 020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000
   m_points:
   - {x: 0, y: 0, z: 0}
@@ -44637,6 +44639,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b132418c7ac9fd4b81bc3048d4cd8b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SceneToLoadOnStart: lavaScene
 --- !u!1001 &1570363789
 Prefab:
   m_ObjectHideFlags: 0
