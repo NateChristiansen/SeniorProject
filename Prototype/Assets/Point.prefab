@@ -52,10 +52,10 @@ MeshRenderer:
   m_GameObject: {fileID: 1000012479877616}
   m_Enabled: 1
   m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_ReceiveShadows: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
+  m_ReflectionProbeUsage: 0
   m_Materials:
   - {fileID: 2100000, guid: 72ddd625af42674489ae1930514ee3ce, type: 2}
   m_SubsetIndices: 
@@ -166,6 +166,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PointValue: 0
+  RotationDegreesPerSecond: 45
 --- !u!135 &135000013616393244
 SphereCollider:
   m_ObjectHideFlags: 1
