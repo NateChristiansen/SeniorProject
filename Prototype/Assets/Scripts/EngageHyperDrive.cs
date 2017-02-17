@@ -1,19 +1,23 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Reflection.Emit;
 
 public class EngageHyperDrive : MonoBehaviour
 {
     public ParticleSystem Particles;
     public Transform ObjectToDestroy;
     public float TimeToWait;
+    [HideInInspector]
     public bool Activate = false;
     public MoveCar Driver;
     private float _speed;
     private bool _activated = false;
+    private float timetostart;
 	// Use this for initialization
-	void Start () {
-	
-	}
+	void Start ()
+    {
+        _speed = Driver.Speed;
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -27,9 +31,14 @@ public class EngageHyperDrive : MonoBehaviour
 	        {
 	            Activate = false;
                 Particles.Stop();
-	            while (Particles.isPlaying){}
-	            Driver.Speed = _speed;
+	            timetostart = 2;
 	        }
+        }
+	    if (timetostart > 0)
+	    {
+	        timetostart -= Time.deltaTime;
+            if (timetostart < 0)
+	            Driver.Speed = _speed;
 	    }
 	}
 
@@ -37,7 +46,6 @@ public class EngageHyperDrive : MonoBehaviour
     {
         if (!_activated)
         {
-            _speed = Driver.Speed;
             Activate = true;
             Driver.Speed = 0;
             Particles.Play();

@@ -101,7 +101,6 @@ public class RG_IKDriver : MonoBehaviour
     [Range(0, 1)] public float wheelShake = 1;
     public WheelCollider wheelCollider;
     private float horizontalInput;
-    private float verticalInput;
 
     private void Start()
     {
