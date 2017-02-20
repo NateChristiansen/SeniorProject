@@ -22,11 +22,11 @@ namespace UnityStandardAssets.Vehicles.Car
         {
             skidParticles = transform.root.GetComponentInChildren<ParticleSystem>();
 
-            if (skidParticles == null)
-            {
-                Debug.LogWarning(" no particle system found on car to generate smoke particles");
-            }
-            else
+            //if (skidParticles == null)
+            //{
+            //    Debug.LogWarning(" no particle system found on car to generate smoke particles");
+            //}
+            if (skidParticles != null)
             {
                 skidParticles.Stop();
             }

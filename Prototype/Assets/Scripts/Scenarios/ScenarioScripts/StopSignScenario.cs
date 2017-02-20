@@ -1,34 +1,27 @@
 ﻿using System;
 using UnityEngine;
 using System.Collections;
+using UnityTest;
 
-public class StopSignScenario : AbstractScenario
+public class StopSignScenario : MonoBehaviour//AbstractScenario
 {
+    public RG_IKDriver Driver;
+    public StopObject Stop;
     // Use this for initialization
 	void Start ()
 	{
-        base.Start();
 	}
-
-    // the result of a good choice
-    public override void GoodResult()
-    {
-        GameObject.Find("StopObject").GetComponent<StopObject>().ChoiceIsGood = true;
-        this.enabled = false;
-    }
-
-    // the result of a bad choice
-    public override void BadResult()
-    {
-        GameObject.Find("StopObject").GetComponent<StopObject>().ChoiceIsGood = false;
-        this.enabled = false;
-    }
 
 	// Update is called once per frame
 	void Update ()
 	{
-        base.Update();
 	}
 
-    
+    void OnTriggerEnter(Collider col)
+    {
+        if (Driver.LookTarget == RG_IKDriver.LookState.Straight)
+        {
+            Stop.ChoiceIsGood = true;
+        }
+    }
 }

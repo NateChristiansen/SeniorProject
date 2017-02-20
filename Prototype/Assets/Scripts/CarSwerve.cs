@@ -6,6 +6,7 @@ public class CarSwerve : MonoBehaviour
 {
     public MoveCar CarPath;
     public RG_IKDriver Driver;
+    public RG_IKDriver.LookState Direction;
 	// Use this for initialization
 	void Start () {
 	
@@ -18,7 +19,7 @@ public class CarSwerve : MonoBehaviour
 
     void OnTriggerEnter(Collider col)
     {
-        if (Driver.LookTarget == RG_IKDriver.LookState.Straight)
+        if (Driver.LookTarget == Direction)
         {
             CarPath.LookingStraight = true;
         }
