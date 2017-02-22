@@ -7,6 +7,7 @@ public class StopCar : MonoBehaviour
     public RG_IKDriver Driver;
     public MoveCar DriverCar;
     private float originalspeed;
+    public DriverControl Controller;
 
 	// Use this for initialization
 	void Start ()
@@ -31,6 +32,7 @@ public class StopCar : MonoBehaviour
         if (Driver.LookTarget == RG_IKDriver.LookState.Straight)
         {
             Stop = true;
+            Controller.SolvedScenario = true;
         }
     }
 }

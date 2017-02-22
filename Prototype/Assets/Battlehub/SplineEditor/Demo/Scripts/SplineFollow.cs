@@ -208,7 +208,8 @@ namespace Battlehub.SplineEditor
             if (m_spline.HasBranches(pointIndex))
             {
                 ForkEventArgs args = new ForkEventArgs(m_spline, pointIndex);
-                Fork.Invoke(args);
+                //Fork.Invoke(args);
+                args.SelectBranchIndex = 0;
                 if (args.SelectBranchIndex > -1 && args.SelectBranchIndex < args.Branches.Length)
                 {
                     Debug.Log("CurveIndex " + m_curveIndex);

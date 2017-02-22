@@ -9,21 +9,21 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1000012479877616}
+  m_RootGameObject: {fileID: 1000011447554046}
   m_IsPrefabParent: 1
---- !u!1 &1000012479877616
+--- !u!1 &1000011447554046
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 4000010442678170}
-  - 33: {fileID: 33000011533580128}
-  - 23: {fileID: 23000011471663950}
-  - 114: {fileID: 114000012996945322}
-  - 135: {fileID: 135000013616393244}
-  - 82: {fileID: 82000013637510882}
+  - 4: {fileID: 4000014024980018}
+  - 33: {fileID: 33000010845114560}
+  - 23: {fileID: 23000013827191518}
+  - 114: {fileID: 114000010336688846}
+  - 135: {fileID: 135000012639969188}
+  - 82: {fileID: 82000010609164286}
   m_Layer: 0
   m_Name: Point
   m_TagString: Untagged
@@ -31,25 +31,25 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4000010442678170
+--- !u!4 &4000014024980018
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000012479877616}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -433.9, y: 4.734177, z: 237}
-  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_GameObject: {fileID: 1000011447554046}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 33.52, y: -0.49, z: 79.07}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!23 &23000011471663950
+--- !u!23 &23000013827191518
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000012479877616}
+  m_GameObject: {fileID: 1000011447554046}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 0
@@ -73,25 +73,25 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!33 &33000011533580128
+--- !u!33 &33000010845114560
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000012479877616}
+  m_GameObject: {fileID: 1000011447554046}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!82 &82000013637510882
+--- !u!82 &82000010609164286
 AudioSource:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000012479877616}
+  m_GameObject: {fileID: 1000011447554046}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: e0604b4341be34f50a8d611c8e0b5af6, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.251
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -142,7 +142,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -154,25 +154,25 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
---- !u!114 &114000012996945322
+--- !u!114 &114000010336688846
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000012479877616}
+  m_GameObject: {fileID: 1000011447554046}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7be45ffda6ba5194c80ed2a45366c655, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PointValue: 0
+  PointValue: 5
   RotationDegreesPerSecond: 45
---- !u!135 &135000013616393244
+--- !u!135 &135000012639969188
 SphereCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000012479877616}
+  m_GameObject: {fileID: 1000011447554046}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1

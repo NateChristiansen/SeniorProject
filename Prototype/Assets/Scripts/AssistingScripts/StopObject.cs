@@ -35,6 +35,7 @@ public class StopObject : MonoBehaviour
 
         // resume speed
         GameObject.Find("Vehicle").GetComponent<MoveCar>().Speed = tempSpeed;
+        ChoiceIsGood = false;
     }
 
 	// Use this for initialization

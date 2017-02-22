@@ -5,17 +5,20 @@ using System;
 public class DriverControl : MonoBehaviour, IGvrGazeResponder
 {
     public RG_IKDriver Driver;
-    private bool _isLooking;
+    [HideInInspector]
+    public bool IsLooking;
+    [HideInInspector]
+    public bool SolvedScenario = false;
     private double _time;
     public void OnGazeEnter()
     {
         Driver.LookTarget = RG_IKDriver.LookState.Straight;
-        _isLooking = true;
+        IsLooking = true;
     }
 
     public void OnGazeExit()
     {
-        _isLooking = false;
+        IsLooking = false;
         _time = 2;
     }
 
@@ -30,7 +33,7 @@ public class DriverControl : MonoBehaviour, IGvrGazeResponder
 	
 	// Update is called once per frame
 	void Update () {
-	    if (!_isLooking && _time > 0)
+	    if (!(IsLooking || SolvedScenario) && _time > 0)
 	    {
 	        _time -= Time.deltaTime;
             if (_time <= 0)

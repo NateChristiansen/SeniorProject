@@ -4,8 +4,10 @@ using System.Collections;
 public class CarContinue : MonoBehaviour
 {
     public StopCar Stopper;
-	// Use this for initialization
-	void Start () {
+    public DriverControl Controller;
+    public ShipGrow Grow;
+    // Use this for initialization
+    void Start () {
 	
 	}
 	
@@ -17,5 +19,9 @@ public class CarContinue : MonoBehaviour
     void OnTriggerEnter(Collider col)
     {
         Stopper.Continue = true;
+        Controller.SolvedScenario = false;
+        Grow.Grow = false;
+        Grow.ScaleTo = 0;
+        Grow.Activate = true;
     }
 }
