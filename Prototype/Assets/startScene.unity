@@ -4770,7 +4770,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdd0031789a6fa240978ffc9df19cbc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_persistentVersions: 2d00000000000000
+  m_persistentVersions: 3300000000000000
   m_modes: 0000000000000000
   m_points:
   - {x: 0, y: 0, z: 0}
@@ -4821,7 +4821,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdd0031789a6fa240978ffc9df19cbc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_persistentVersions: 2d00000000000000
+  m_persistentVersions: 3300000000000000
   m_modes: 0000000000000000
   m_points:
   - {x: 0, y: 0, z: 0}
@@ -17698,7 +17698,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdd0031789a6fa240978ffc9df19cbc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_persistentVersions: 3400000000000000
+  m_persistentVersions: 3a00000000000000
   m_modes: 0000000000000000
   m_points:
   - {x: 0, y: 0, z: 0}
@@ -20484,7 +20484,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdd0031789a6fa240978ffc9df19cbc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_persistentVersions: 2d00000000000000
+  m_persistentVersions: 3300000000000000
   m_modes: 0000000000000000
   m_points:
   - {x: 0, y: 0, z: 0}
@@ -21541,7 +21541,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdd0031789a6fa240978ffc9df19cbc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_persistentVersions: 2d00000000000000
+  m_persistentVersions: 3300000000000000
   m_modes: 0000000000000000
   m_points:
   - {x: 0, y: 0, z: 0}
@@ -29794,6 +29794,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Driver: {fileID: 1027347274}
+  IsLooking: 0
+  SolvedScenario: 0
 --- !u!114 &1027347274
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42668,9 +42670,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ba4544da6795004b94e0a4e9eb787ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Path: {fileID: 1563516919}
-  Speed: 0.35
   Loop: 1
+  LookingStraight: 0
+  Speed: 1000
+  Spline: {fileID: 1563516919}
+  Offset: 0
+  IsRunning: 1
+  IsLoop: 1
 --- !u!114 &1526992567
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43479,7 +43485,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdd0031789a6fa240978ffc9df19cbc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_persistentVersions: 7d00000000000000
+  m_persistentVersions: 8300000000000000
   m_modes: 020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000
   m_points:
   - {x: 0, y: 0, z: 0}
