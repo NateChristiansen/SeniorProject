@@ -4770,7 +4770,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdd0031789a6fa240978ffc9df19cbc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_persistentVersions: 2f00000000000000
+  m_persistentVersions: 3400000000000000
   m_modes: 0000000000000000
   m_points:
   - {x: 0, y: 0, z: 0}
@@ -4821,7 +4821,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdd0031789a6fa240978ffc9df19cbc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_persistentVersions: 2f00000000000000
+  m_persistentVersions: 3400000000000000
   m_modes: 0000000000000000
   m_points:
   - {x: 0, y: 0, z: 0}
@@ -17698,7 +17698,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdd0031789a6fa240978ffc9df19cbc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_persistentVersions: 3600000000000000
+  m_persistentVersions: 3b00000000000000
   m_modes: 0000000000000000
   m_points:
   - {x: 0, y: 0, z: 0}
@@ -20484,7 +20484,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdd0031789a6fa240978ffc9df19cbc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_persistentVersions: 2f00000000000000
+  m_persistentVersions: 3400000000000000
   m_modes: 0000000000000000
   m_points:
   - {x: 0, y: 0, z: 0}
@@ -21541,7 +21541,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdd0031789a6fa240978ffc9df19cbc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_persistentVersions: 2f00000000000000
+  m_persistentVersions: 3400000000000000
   m_modes: 0000000000000000
   m_points:
   - {x: 0, y: 0, z: 0}
@@ -42672,11 +42672,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Loop: 1
   LookingStraight: 0
-  Speed: 0.35
-  Spline: {fileID: 0}
+  Speed: 1000
+  Spline: {fileID: 1563516919}
   Offset: 0
   IsRunning: 1
-  IsLoop: 0
+  IsLoop: 1
 --- !u!114 &1526992567
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43485,7 +43485,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdd0031789a6fa240978ffc9df19cbc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_persistentVersions: 7f00000000000000
+  m_persistentVersions: 8400000000000000
   m_modes: 020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000
   m_points:
   - {x: 0, y: 0, z: 0}
