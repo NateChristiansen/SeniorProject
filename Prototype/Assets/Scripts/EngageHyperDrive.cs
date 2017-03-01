@@ -6,6 +6,7 @@ public class EngageHyperDrive : MonoBehaviour
 {
     public ParticleSystem Particles;
     public Transform ObjectToDestroy;
+    public Transform ObjectToLoad;
     public float TimeToWait;
     [HideInInspector]
     public bool Activate = false;
@@ -14,6 +15,8 @@ public class EngageHyperDrive : MonoBehaviour
     private bool _activated = false;
     private float timetostart;
     public TimedObject[] Points;
+
+    private bool _scale;
 	// Use this for initialization
 	void Start ()
     {
@@ -22,6 +25,18 @@ public class EngageHyperDrive : MonoBehaviour
 	
 	// Update is called once per frame
 	void Update () {
+	    if (_scale)
+	    {
+	        float amt = ObjectToLoad.localScale.x + Time.deltaTime*.9f*.2f;
+	        if (amt > 1)
+	        {
+	            amt = 1;
+	            _scale = false;
+                ObjectToLoad.localScale = new Vector3(1, 1, 1);
+	        }
+            else
+                ObjectToLoad.localScale = new Vector3(amt, amt, amt);
+	    }
 	    if (Activate)
 	    {
 	        if (TimeToWait > 0)
@@ -32,6 +47,8 @@ public class EngageHyperDrive : MonoBehaviour
 	        {
 	            Activate = false;
                 Particles.Stop();
+                if (ObjectToLoad != null) ObjectToLoad.gameObject.SetActive(true);
+	            _scale = true;
 	            timetostart = 2;
             }
             if (TimeToWait < 7 && !Points[0].IsStarted)
