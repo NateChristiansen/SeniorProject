@@ -19,6 +19,9 @@ public class TimedStop : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
+        if (Stop == true)
+            WaitTime -= Time.deltaTime; // count down
+
         if (Stop && !Continue)
             DriverCar.Speed = 0;
         else
@@ -26,11 +29,17 @@ public class TimedStop : MonoBehaviour {
 
         if (Stop && Driver.LookTarget != RG_IKDriver.LookState.Straight)
             Stop = false;
+
+        if (WaitTime <= 0)
+        {
+            Stop = false;
+            DriverCar.Speed = originalspeed;
+        }
     }
 
     void OnTriggerEnter(Collider col)
     {
-        if (Driver.LookTarget == RG_IKDriver.LookState.Straight)
+        if (Driver.LookTarget == RG_IKDriver.LookState.Straight && col.gameObject.tag.Equals("car"))
         {
             Stop = true;
             Controller.SolvedScenario = true;
