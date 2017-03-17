@@ -18,7 +18,6 @@ public class RockImpactSound : MonoBehaviour
 
     void OnCollisionEnter(Collision col)
     {
-        Debug.Log(col.gameObject.tag);
         if (col.gameObject.tag.Equals("terrain") && playTimes < 1)
         {
             terrainSound.Play();
