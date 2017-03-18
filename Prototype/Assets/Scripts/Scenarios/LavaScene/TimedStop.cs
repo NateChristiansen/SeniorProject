@@ -42,7 +42,6 @@ public class TimedStop : MonoBehaviour {
 
             // award points for completing scenario
             GlobalValues.ScenarioCompletion();
-            Debug.Log(GlobalValues.Score);
         }
     }
 }
