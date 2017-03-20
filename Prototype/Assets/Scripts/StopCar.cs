@@ -33,6 +33,7 @@ public class StopCar : MonoBehaviour
         {
             Stop = true;
             Controller.SolvedScenario = true;
+            Driver.FootPosition = RG_IKDriver.FootState.Brake;
         }
     }
 }

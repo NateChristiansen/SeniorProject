@@ -6,6 +6,7 @@ public class CarContinue : MonoBehaviour
     public StopCar Stopper;
     public DriverControl Controller;
     public ShipGrow Grow;
+    public RG_IKDriver Driver;
     // Use this for initialization
     void Start () {
 	
@@ -20,6 +21,7 @@ public class CarContinue : MonoBehaviour
     {
         Stopper.Continue = true;
         Controller.SolvedScenario = false;
+        Driver.FootPosition = RG_IKDriver.FootState.Gas;
         Grow.Grow = false;
         Grow.ScaleTo = 0;
         Grow.Activate = true;
