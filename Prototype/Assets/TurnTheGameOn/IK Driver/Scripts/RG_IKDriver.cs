@@ -16,11 +16,13 @@ public class RG_IKDriver : MonoBehaviour
     }
     public enum TurnState
     {
-        BigLeft = -2,
-        Left = -1,
+        BigLeft = -3,
+        Left = -2,
+        SmallLeft = -1,
         Straight = 0,
-        Right = 1,
-        BigRight = 2
+        SmallRight = 1,
+        Right = 2,
+        BigRight = 3
     }
     public enum LookState
     {
