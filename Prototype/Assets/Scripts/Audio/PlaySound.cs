@@ -17,7 +17,7 @@ public class PlaySound : MonoBehaviour
 
     void OnTriggerEnter(Collider col)
     {
-        if (col.gameObject.name == "car_body")
+        if (col.gameObject.tag == "car")
         {
             transform.gameObject.GetComponent<AudioSource>().Play();
         }

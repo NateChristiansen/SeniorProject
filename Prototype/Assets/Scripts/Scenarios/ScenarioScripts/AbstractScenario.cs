@@ -21,7 +21,7 @@ public abstract class AbstractScenario : MonoBehaviour, IScenario {
     protected bool _isTriggered;
     void OnTriggerEnter(Collider col)
     {
-        if (col.gameObject.name == "car_body")
+        if (col.gameObject.tag == "car")
         {
             if (_isTriggered) return;
             enabled = true;
