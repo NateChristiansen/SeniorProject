@@ -12,6 +12,7 @@ TagManager:
   - mainCamera
   - Fire
   - terrain
+  - boulder
   layers:
   - Default
   - TransparentFX
