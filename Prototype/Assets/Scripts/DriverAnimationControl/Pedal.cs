@@ -21,7 +21,7 @@ public class Pedal : MonoBehaviour
 
     void OnTriggerEnter(Collider obj)
     {
-        if (obj.gameObject.name == "car_body")
+        if (obj.gameObject.tag == "car")
         {
             _driver.FootPosition = FootType;
         }

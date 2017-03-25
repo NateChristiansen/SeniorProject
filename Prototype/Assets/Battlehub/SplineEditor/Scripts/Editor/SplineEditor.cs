@@ -34,6 +34,13 @@ namespace Battlehub.SplineEditor
                 ToggleLoop(loop);
             }
 
+            EditorGUI.BeginChangeCheck();
+            bool show = EditorGUILayout.Toggle("Show When Not Selected", m_spline.ShowWhenNotFocused);
+            if (EditorGUI.EndChangeCheck())
+            {
+                m_spline.ShowWhenNotFocused = show;
+            }
+
             GUILayout.BeginHorizontal();
             {
                 GUILayout.BeginVertical();

@@ -330,6 +330,8 @@ namespace Battlehub.SplineEditor
 
         private static SplineBase m_activeSpline;
         private static int m_activeControlPointIndex = -1;
+
+        public bool ShowWhenNotFocused = false;
       
         public static SplineBase ActiveSpline
         {
@@ -1252,7 +1254,8 @@ namespace Battlehub.SplineEditor
                 return;
             }
 
-            UnselectRecursive(Root);
+            if (!ShowWhenNotFocused)
+                UnselectRecursive(Root);
         }
 
         private void UnselectRecursive(SplineBase spline)

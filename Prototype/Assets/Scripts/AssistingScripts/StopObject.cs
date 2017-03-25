@@ -10,7 +10,7 @@ public class StopObject : MonoBehaviour
 
     void OnTriggerEnter(Collider col)
     {
-        if (col.gameObject.name.Equals("car_body") && ChoiceIsGood)
+        if (col.gameObject.tag.Equals("car") && ChoiceIsGood)
         {
             StopMovingObject();
         }
