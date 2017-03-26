@@ -23,5 +23,7 @@ public class CarSwerve : MonoBehaviour
         {
             CarPath.LookingStraight = true;
         }
+		else
+			CarPath.LookingStraight = false;
     }
 }
