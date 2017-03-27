@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using Battlehub.SplineEditor;
+using UnityEngine.SceneManagement;
 
 public class Transition : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class Transition : MonoBehaviour
     public int VehicleSpeed;
     public GameObject Moon;
     public GameObject SpaceTop;
+    public MoveCar DriverCar;
 
 	// Use this for initialization
 	void Start () {
@@ -35,10 +37,10 @@ public class Transition : MonoBehaviour
         Vehicle.transform.rotation = SpaceSpline.transform.rotation;
 
         // set vehicle to follow space spline
-        Vehicle.GetComponent<MoveCar>().Spline = SpaceSpline;
+        DriverCar.Spline = SpaceSpline;
 
         // set speed
-        Vehicle.GetComponent<MoveCar>().Speed = VehicleSpeed;
+        DriverCar.Speed = VehicleSpeed;
 
         // add space objects to vehicle parent
         Moon.transform.parent = Vehicle.transform;
@@ -49,8 +51,14 @@ public class Transition : MonoBehaviour
     {
         if (col.gameObject.tag.Equals("car"))
         {
-            Vehicle.GetComponent<MoveCar>().Speed = 0;
-            InitializeCar();
+            DriverCar.Speed = 0;
+            //InitializeCar();
+            LoadSpace();
         }
+    }
+
+    void LoadSpace()
+    {
+        SceneManager.LoadScene("spaceScene");
     }
 }
