@@ -5,6 +5,7 @@ public class Destroyer : MonoBehaviour
 
     public GameObject RockScenery;
     public GameObject BillBoardParent;
+    public GameObject Anim1Parent;
 	// Use this for initialization
 	void Start () 
     {
@@ -26,12 +27,18 @@ public class Destroyer : MonoBehaviour
         Destroy(BillBoardParent);
     }
 
+    private void DestroyAnim1()
+    {
+        Destroy(Anim1Parent);
+    }
+
     void OnTriggerEnter(Collider col)
     {
         if (col.gameObject.tag.Equals("car"))
         {
             DestroyRockScenery();
             DestroyBillBoards();
+            DestroyAnim1();
         }
     }
 }

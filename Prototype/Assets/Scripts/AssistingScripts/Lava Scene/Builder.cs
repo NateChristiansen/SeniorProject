@@ -5,6 +5,8 @@ public class Builder : MonoBehaviour
 {
 
     public GameObject LavaGameObject;
+    public GameObject Animation2Parent;
+    public GameObject Orbs2Parent;
 	// Use this for initialization
 	void Start () {
 	
@@ -20,11 +22,23 @@ public class Builder : MonoBehaviour
         if (col.gameObject.tag.Equals("car"))
         {
             BuildLava();
+            BuildAnimation2();
+            BuildOrbs2();
         }
     }
 
     private void BuildLava()
     {
         LavaGameObject.SetActive(true);
+    }
+
+    private void BuildAnimation2()
+    {
+        Animation2Parent.SetActive(true);
+    }
+
+    private void BuildOrbs2()
+    {
+        Orbs2Parent.SetActive(true);
     }
 }

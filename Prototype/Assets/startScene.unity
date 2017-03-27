@@ -4879,7 +4879,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowWhenNotFocused: 0
-  m_persistentVersions: 3a00000000000000
+  m_persistentVersions: 3c00000000000000
   m_modes: 0000000000000000
   m_points:
   - {x: 0, y: 0, z: 0}
@@ -4931,7 +4931,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowWhenNotFocused: 0
-  m_persistentVersions: 3a00000000000000
+  m_persistentVersions: 3c00000000000000
   m_modes: 0000000000000000
   m_points:
   - {x: 0, y: 0, z: 0}
@@ -17953,7 +17953,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowWhenNotFocused: 0
-  m_persistentVersions: 4100000000000000
+  m_persistentVersions: 4300000000000000
   m_modes: 0000000000000000
   m_points:
   - {x: 0, y: 0, z: 0}
@@ -20740,7 +20740,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowWhenNotFocused: 0
-  m_persistentVersions: 3a00000000000000
+  m_persistentVersions: 3c00000000000000
   m_modes: 0000000000000000
   m_points:
   - {x: 0, y: 0, z: 0}
@@ -22053,7 +22053,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowWhenNotFocused: 0
-  m_persistentVersions: 3a00000000000000
+  m_persistentVersions: 3c00000000000000
   m_modes: 0000000000000000
   m_points:
   - {x: 0, y: 0, z: 0}
@@ -44485,7 +44485,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowWhenNotFocused: 0
-  m_persistentVersions: 8a00000000000000
+  m_persistentVersions: 8c00000000000000
   m_modes: 020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000
   m_points:
   - {x: 0, y: 0, z: 0}
@@ -58713,7 +58713,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f7d9e2d2bf94c140b4f26e0138149b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gvr: {fileID: 0}
+  gvr: {fileID: 2051074360}
 --- !u!81 &2048969130
 AudioListener:
   m_ObjectHideFlags: 0
@@ -58859,6 +58859,12 @@ MonoBehaviour:
   compatabilityBase: /Genesis 2/Male
   declarativeUse: /Urban Metro Outfit for Genesis 2 Male(s)/Shoes
   controllerScales: []
+--- !u!114 &2051074360 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11414954, guid: 970dd4b9371394fb4890965f608d46fd,
+    type: 2}
+  m_PrefabInternal: {fileID: 1030984822}
+  m_Script: {fileID: 11500000, guid: a40b544b8c3553c40852ae7ad35a9343, type: 3}
 --- !u!1001 &2051735432
 Prefab:
   m_ObjectHideFlags: 0

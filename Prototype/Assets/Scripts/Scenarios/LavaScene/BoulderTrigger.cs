@@ -18,10 +18,18 @@ public class BoulderTrigger : MonoBehaviour
 	
 	}
 
+    private void DisableKinematic()
+    {
+        SmallBoulder1.GetComponent<Rigidbody>().isKinematic = false;
+        SmallBoulder2.GetComponent<Rigidbody>().isKinematic = false;
+        LargeBoulder.GetComponent<Rigidbody>().isKinematic = false;
+    }
+
     void OnTriggerEnter(Collider col)
     {
         if (col.gameObject.tag.Equals("car"))
         {
+            DisableKinematic();
             LargeBoulder.GetComponent<RollingBoulder>().SetStartRolling(true);
             SmallBoulder1.GetComponent<RollingBoulder>().SetStartRolling(true);
             SmallBoulder2.GetComponent<RollingBoulder>().SetStartRolling(true);
