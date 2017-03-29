@@ -135,6 +135,7 @@ public class MoveCar : MonoBehaviour
         if (m_spline.HasBranches(pointIndex))
         {
             ForkEventArgs args = new ForkEventArgs(m_spline, pointIndex);
+            Debug.Log("You have hit the branch");
             if (args.Branches.Length > 0)
             {
                 args.SelectBranchIndex = 0;
@@ -144,7 +145,7 @@ public class MoveCar : MonoBehaviour
                 m_spline = args.Branches[0];
                 m_t = 0.0f;
                 m_curveIndex = 0;
-                //LookingStraight = false;
+                LookingStraight = false;
             }
         }
     }

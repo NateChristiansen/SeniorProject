@@ -30,6 +30,11 @@ public class DriverControl : MonoBehaviour, IGvrGazeResponder
     void Start () {
 	
 	}
+
+    public void Clear()
+    {
+        _time = 0;
+    }
 	
 	// Update is called once per frame
 	void Update () {
