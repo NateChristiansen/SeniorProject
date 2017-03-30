@@ -1,7 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ShotBehavior : MonoBehaviour {
+public class ShotBehavior : MonoBehaviour
+{
+    public int Mult = 1;
 
 	// Use this for initialization
 	void Start () {
@@ -10,6 +12,6 @@ public class ShotBehavior : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		transform.position += transform.forward * Time.deltaTime * 1000f;
+		transform.position += transform.forward * Time.deltaTime * 1000f * Mult;
 	}
 }
