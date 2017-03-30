@@ -20,7 +20,8 @@ public class MoveCar : MonoBehaviour
     private bool m_isRunning;
     private bool m_isCompleted;
 
-    private float m_t;
+    [HideInInspector]
+    public float m_t;
     private int m_curveIndex;
 
     private void Start()
