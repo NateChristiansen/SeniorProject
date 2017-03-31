@@ -3,6 +3,7 @@ using System.Collections;
 
 public class StopCar : MonoBehaviour
 {
+    [HideInInspector]
     public bool Continue, Stop;
     public RG_IKDriver Driver;
     public MoveCar DriverCar;

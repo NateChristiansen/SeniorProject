@@ -1,10 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class FireUFO : MonoBehaviour
+public class CheckLook : MonoBehaviour
 {
-    public CannonBehavior Cannon;
+    public RG_IKDriver Driver;
 
+    public RG_IKDriver.LookState Direction;
+    [HideInInspector]
+    public bool Pass;
 	// Use this for initialization
 	void Start () {
 	
@@ -18,6 +21,6 @@ public class FireUFO : MonoBehaviour
     void OnTriggerEnter(Collider col)
     {
         if (col.gameObject.tag == "car")
-            Cannon.Fire();
+            Pass = Driver.LookTarget == Direction;
     }
 }

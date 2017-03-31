@@ -18,6 +18,7 @@ public class DeleteClusters : MonoBehaviour {
 
 	void OnTriggerEnter(Collider col)
 	{
-		Destroy (Cluster);
+        if (col.gameObject.tag == "car")
+		    Destroy (Cluster);
 	}
 }
