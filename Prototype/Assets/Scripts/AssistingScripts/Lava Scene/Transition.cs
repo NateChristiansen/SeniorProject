@@ -26,7 +26,9 @@ public class Transition : MonoBehaviour
 
     void InitializeCar()
     {
-        Debug.Log("OK");
+        // set vehicle to follow space spline
+        DriverCar.Spline = SpaceSpline;
+
         // set camera clipping planes to 5000
         MainCamera.farClipPlane = 5000;
 
@@ -35,9 +37,6 @@ public class Transition : MonoBehaviour
 
         // set vehicle rotation
         Vehicle.transform.rotation = SpaceSpline.transform.rotation;
-
-        // set vehicle to follow space spline
-        DriverCar.Spline = SpaceSpline;
 
         // set speed
         DriverCar.Speed = VehicleSpeed;
@@ -51,9 +50,10 @@ public class Transition : MonoBehaviour
     {
         if (col.gameObject.tag.Equals("car"))
         {
+            Debug.Log("OK");
             DriverCar.Speed = 0;
-            //InitializeCar();
-            LoadSpace();
+            InitializeCar();
+            //LoadSpace();
         }
     }
 

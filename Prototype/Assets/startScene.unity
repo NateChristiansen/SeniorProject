@@ -4879,7 +4879,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowWhenNotFocused: 0
-  m_persistentVersions: 3c00000000000000
+  m_persistentVersions: 4600000000000000
   m_modes: 0000000000000000
   m_points:
   - {x: 0, y: 0, z: 0}
@@ -4931,7 +4931,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowWhenNotFocused: 0
-  m_persistentVersions: 3c00000000000000
+  m_persistentVersions: 4600000000000000
   m_modes: 0000000000000000
   m_points:
   - {x: 0, y: 0, z: 0}
@@ -12507,6 +12507,52 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 43ed410746fa0d34eb347768e58c587f, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &568536725
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 568536727}
+  - 114: {fileID: 568536726}
+  m_Layer: 0
+  m_Name: ScoreStarter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &568536726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 568536725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 467f2fa2f2003314f9a892597a14556b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  JungleOrbAmount: 0
+  LavaOrbAmount: 13
+  SpaceOrbAmount: 0
+  JungleScenarioAmount: 1
+  LavaScenarioAmount: 3
+  SpaceScenarioAmount: 0
+--- !u!4 &568536727
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 568536725}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1821.6521, y: -51.02124, z: 629.95825}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
 --- !u!1001 &568555082
 Prefab:
   m_ObjectHideFlags: 0
@@ -17953,7 +17999,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowWhenNotFocused: 0
-  m_persistentVersions: 4300000000000000
+  m_persistentVersions: 4d00000000000000
   m_modes: 0000000000000000
   m_points:
   - {x: 0, y: 0, z: 0}
@@ -20740,7 +20786,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowWhenNotFocused: 0
-  m_persistentVersions: 3c00000000000000
+  m_persistentVersions: 4600000000000000
   m_modes: 0000000000000000
   m_points:
   - {x: 0, y: 0, z: 0}
@@ -22053,7 +22099,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowWhenNotFocused: 0
-  m_persistentVersions: 3c00000000000000
+  m_persistentVersions: 4600000000000000
   m_modes: 0000000000000000
   m_points:
   - {x: 0, y: 0, z: 0}
@@ -44485,7 +44531,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowWhenNotFocused: 0
-  m_persistentVersions: 8c00000000000000
+  m_persistentVersions: 9600000000000000
   m_modes: 020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000
   m_points:
   - {x: 0, y: 0, z: 0}

@@ -22,6 +22,7 @@ public class CarSwerve : MonoBehaviour
         if (Driver.LookTarget == Direction)
         {
             CarPath.LookingStraight = true;
+            GlobalValues.GetInstance().AddToScenarioCompletionTotal();
         }
 		else
 			CarPath.LookingStraight = false;

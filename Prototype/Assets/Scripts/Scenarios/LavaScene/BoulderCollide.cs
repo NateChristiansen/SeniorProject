@@ -43,9 +43,6 @@ public class BoulderCollide : MonoBehaviour {
 
             // play crash sound
             CrashSound.Play();
-
-            // award points for completing scenario
-            GlobalValues.ScenarioCompletion();
         }
     }
 }

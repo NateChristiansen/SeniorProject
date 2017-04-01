@@ -28,7 +28,7 @@ public class PointObject : MonoBehaviour, IGvrGazeResponder
     {
         if (!_triggered)
         {
-            GlobalValues.Score += PointValue;
+            GlobalValues.GetInstance().AddToOrbTotal(); // Orb is collected
             _clip.Play();
         }
         gameObject.GetComponent<Renderer>().enabled = false;

@@ -41,7 +41,7 @@ public class TimedStop : MonoBehaviour {
             Stop = true;
 
             // award points for completing scenario
-            GlobalValues.ScenarioCompletion();
+            GlobalValues.GetInstance().AddToScenarioCompletionTotal();
         }
     }
 }

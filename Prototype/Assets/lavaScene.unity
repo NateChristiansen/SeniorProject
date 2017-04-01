@@ -12061,6 +12061,59 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_index: 107
+--- !u!1 &744248952
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 744248955}
+  - 65: {fileID: 744248954}
+  - 114: {fileID: 744248953}
+  m_Layer: 0
+  m_Name: TempPointTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &744248953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 744248952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fe725c3414be4548bb680ca1ebc49d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &744248954
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 744248952}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &744248955
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 744248952}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 3019, y: 106, z: 1742}
+  m_LocalScale: {x: 1, y: 200, z: 200}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 21
 --- !u!1 &744330408
 GameObject:
   m_ObjectHideFlags: 0
@@ -15644,7 +15697,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowWhenNotFocused: 0
-  m_persistentVersions: b12f000000000000
+  m_persistentVersions: b62f000000000000
   m_modes: 02000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000
   m_points:
   - {x: 0, y: 0, z: 0}
@@ -34946,6 +34999,7 @@ GameObject:
   - 23: {fileID: 1931190486}
   - 65: {fileID: 1931190487}
   - 114: {fileID: 1931190490}
+  - 114: {fileID: 1931190491}
   m_Layer: 0
   m_Name: TransitionEntrance
   m_TagString: Untagged
@@ -35020,7 +35074,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1931190485}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dc43a1f75f3d409499f9b41fab84f79f, type: 3}
   m_Name: 
@@ -35032,6 +35086,17 @@ MonoBehaviour:
   Moon: {fileID: 1148547423}
   SpaceTop: {fileID: 261674703}
   DriverCar: {fileID: 1386718391}
+--- !u!114 &1931190491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1931190485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4199eb185ddd98449ce2e56fbd5293b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1934428311
 GameObject:
   m_ObjectHideFlags: 0
