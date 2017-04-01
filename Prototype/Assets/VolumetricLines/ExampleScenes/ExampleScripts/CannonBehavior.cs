@@ -6,6 +6,7 @@ public class CannonBehavior : MonoBehaviour {
 	public Transform m_cannonRot;
 	public Transform m_muzzle;
 	public GameObject m_shotPrefab;
+    public Transform Car;
 
 	// Use this for initialization
 	void Start () 
@@ -16,6 +17,7 @@ public class CannonBehavior : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
+        transform.LookAt(Car);
 	}
 
     public void Fire()

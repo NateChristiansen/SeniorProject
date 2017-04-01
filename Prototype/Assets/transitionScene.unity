@@ -310,6 +310,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fddde68f916c76049a5ad77a3851e5ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TitleText: {fileID: 1191781179}
   LevelText: {fileID: 2134894139}
   OrbText: {fileID: 1418208325}
   ScenarioText: {fileID: 1660046118}

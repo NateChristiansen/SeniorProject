@@ -27,10 +27,10 @@ Material:
         m_Texture: {fileID: 2800000, guid: 93a726948508cc14eab67fb1abe2daa8, type: 3}
         m_Scale: {x: 1, y: 1}
 <<<<<<< HEAD
-        m_Offset: {x: 2.3363664, y: 0}
+        m_Offset: {x: 3.4442558, y: 0}
 =======
-        m_Offset: {x: 3.6113472, y: 0}
->>>>>>> 8a83a7feb83ec36ea625e0a11cf837e815d7e362
+        m_Offset: {x: 3.2937768, y: 0}
+>>>>>>> cac964c8c625cefc2bac9a999878931ae384aabe
     - first:
         name: _MainTex
       second:

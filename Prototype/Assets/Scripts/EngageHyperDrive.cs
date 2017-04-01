@@ -82,7 +82,7 @@ public class EngageHyperDrive : MonoBehaviour
 
     void OnTriggerEnter(Collider col)
     {
-        if (!_activated)
+        if (!_activated && col.gameObject.tag == "car")
         {
             Activate = true;
             Driver.Speed = 0;

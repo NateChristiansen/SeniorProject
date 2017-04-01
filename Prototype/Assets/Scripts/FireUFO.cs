@@ -17,6 +17,7 @@ public class FireUFO : MonoBehaviour
 
     void OnTriggerEnter(Collider col)
     {
-        Cannon.Fire();
+        if (col.gameObject.tag == "car")
+            Cannon.Fire();
     }
 }

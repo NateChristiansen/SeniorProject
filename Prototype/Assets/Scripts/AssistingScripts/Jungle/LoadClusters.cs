@@ -16,7 +16,8 @@ public class LoadClusters : MonoBehaviour {
 
 	void OnTriggerEnter(Collider col)
 	{
-		Cluster.SetActive(true);
+	    if (col.gameObject.tag == "car")
+            Cluster.SetActive(true);
 	}
 
 	

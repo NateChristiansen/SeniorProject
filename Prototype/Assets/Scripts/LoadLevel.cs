@@ -25,7 +25,7 @@ public class LoadLevel : MonoBehaviour {
 
     void OnTriggerEnter(Collider col)
     {
-        if (async != null)
+        if (async != null && col.gameObject.tag == "car")
             async.allowSceneActivation = true;
     }
 }
