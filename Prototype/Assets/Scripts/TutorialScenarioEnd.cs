@@ -4,8 +4,11 @@ using System.Collections;
 public class TutorialScenarioEnd : MonoBehaviour {
 
     public MoveCar Car;
-    public PointTutorialStart StartPoint;
+    public TutorialScenarioStart StartPoint;
     public CheckLook Checker;
+    public StopCar CarStopper;
+    public TutorialText Ending;
+    private bool _lock;
 
     // Use this for initialization
     void Start()
@@ -22,7 +25,13 @@ public class TutorialScenarioEnd : MonoBehaviour {
     {
         if (!Checker.Pass)
         {
+            CarStopper.Restart();
             StartPoint.Restart();
+        }
+        else if (Checker.Pass && Ending != null && !_lock)
+        {
+            _lock = true;
+            Ending.gameObject.SetActive(true);
         }
     }
 }

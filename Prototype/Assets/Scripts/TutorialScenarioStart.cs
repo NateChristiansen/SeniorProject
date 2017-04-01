@@ -17,13 +17,18 @@ public class TutorialScenarioStart : MonoBehaviour
 
     void OnTriggerEnter(Collider col)
     {
-        _carLoc = Car.m_t;
+        if (col.gameObject.tag == "car")
+            _carLoc = Car.m_t;
     }
 
     // Update is called once per frame
     void Update()
     {
-        //Car.m_t = _carLoc;
-        //Tutorial.gameObject.SetActive(true);
+    }
+
+    public void Restart()
+    {
+        Car.m_t = _carLoc;
+        Tutorial.gameObject.SetActive(true);
     }
 }

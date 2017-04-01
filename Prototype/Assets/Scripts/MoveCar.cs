@@ -10,9 +10,7 @@ public class MoveCar : MonoBehaviour
     public bool Loop;
     [HideInInspector]
     public bool LookingStraight;
-    public float Speed {
-        get;
-        set; }
+    public float Speed;
     public SplineBase Spline;
     public float Offset;
     public bool IsRunning = true;
