@@ -17,7 +17,7 @@ public class ActivateTutorial : MonoBehaviour
 
     void OnTriggerEnter(Collider col)
     {
-        if (_lock)
+        if (!_lock && col.gameObject.tag == "car")
             Tutorial.gameObject.SetActive(true);
         _lock = true;
     }

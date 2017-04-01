@@ -19,7 +19,7 @@ public class PointTutorialEnd : MonoBehaviour
 
     void OnTriggerEnter(Collider col)
     {
-        if (Point1.gameObject.activeSelf || Point2.gameObject.activeSelf)
+        if (col.gameObject.tag == "car" && Point1.gameObject.activeSelf || Point2.gameObject.activeSelf)
         {
             StartPoint.Restart();
         }

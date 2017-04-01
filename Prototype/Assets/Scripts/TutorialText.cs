@@ -8,8 +8,6 @@ public class TutorialText : MonoBehaviour, IGvrGazeResponder
 	// Use this for initialization
 	void Start ()
 	{
-	    _initialSpeed = Car.Speed;
-        Car.Speed = 0;
     }
 	
 	// Update is called once per frame
@@ -19,6 +17,8 @@ public class TutorialText : MonoBehaviour, IGvrGazeResponder
 
     public void OnEnable()
     {
+        _initialSpeed = Car.Speed;
+        Car.Speed = 0;
     }
 
     public void OnGazeEnter()

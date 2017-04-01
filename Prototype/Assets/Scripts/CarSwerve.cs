@@ -19,11 +19,14 @@ public class CarSwerve : MonoBehaviour
 
     void OnTriggerEnter(Collider col)
     {
-        if (Driver.LookTarget == Direction)
+        if (col.gameObject.tag == "car")
         {
-            CarPath.LookingStraight = true;
+            if (Driver.LookTarget == Direction)
+            {
+                CarPath.LookingStraight = true;
+            }
+            else
+                CarPath.LookingStraight = false;
         }
-		else
-			CarPath.LookingStraight = false;
     }
 }
