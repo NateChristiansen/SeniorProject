@@ -729,6 +729,7 @@ GameObject:
   - 4: {fileID: 27245108}
   - 65: {fileID: 27245110}
   - 114: {fileID: 27245109}
+  - 114: {fileID: 27245111}
   m_Layer: 0
   m_Name: FireUFO (4)
   m_TagString: Untagged
@@ -773,6 +774,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10, y: 10, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &27245111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 27245107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b04af62ce59c5444e88cb2e292a80ce0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Shield: {fileID: 1042210518}
+  Driver: {fileID: 887614258}
 --- !u!1 &32732252
 GameObject:
   m_ObjectHideFlags: 0
@@ -2325,7 +2339,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 0.371
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   Priority: 128
@@ -2727,7 +2741,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowWhenNotFocused: 1
-  m_persistentVersions: f005000000000000
+  m_persistentVersions: 0306000000000000
   m_modes: 0200000002000000020000000200000002000000020000000200000002000000
   m_points:
   - {x: 0, y: 0, z: 0}
@@ -4738,6 +4752,10 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 115652, guid: f9ed7f6908b8b4f8c94fc6f99f9ec961, type: 2}
+      propertyPath: m_TagString
+      value: ufo
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f9ed7f6908b8b4f8c94fc6f99f9ec961, type: 2}
   m_IsPrefabParent: 0
@@ -5639,6 +5657,7 @@ MonoBehaviour:
   Offset: 0
   IsRunning: 1
   IsLoop: 0
+  m_t: 0
 --- !u!114 &235519258
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7521,6 +7540,7 @@ MonoBehaviour:
   Offset: 0
   IsRunning: 1
   IsLoop: 0
+  m_t: 0
 --- !u!114 &323628547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15515,7 +15535,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowWhenNotFocused: 1
-  m_persistentVersions: 8d01000000000000
+  m_persistentVersions: a001000000000000
   m_modes: 020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000
   m_points:
   - {x: 26.31, y: 15.78, z: 0}
@@ -24886,6 +24906,7 @@ MonoBehaviour:
   Offset: 0
   IsRunning: 1
   IsLoop: 0
+  m_t: 0
 --- !u!1 &862044287
 GameObject:
   m_ObjectHideFlags: 0
@@ -37116,13 +37137,14 @@ GameObject:
   - 65: {fileID: 1042210522}
   - 23: {fileID: 1042210521}
   - 114: {fileID: 1042210520}
+  - 54: {fileID: 1042210524}
   m_Layer: 0
   m_Name: Shield
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1042210519
 Transform:
   m_ObjectHideFlags: 0
@@ -37130,8 +37152,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1042210518}
   m_LocalRotation: {x: 0, y: -0.38268343, z: 0, w: 0.92387956}
-  m_LocalPosition: {x: 55.8, y: 15, z: 134.2}
-  m_LocalScale: {x: 0, y: 200, z: 200}
+  m_LocalPosition: {x: 55.8, y: 149, z: 134.2}
+  m_LocalScale: {x: 0, y: 600, z: 600}
   m_LocalEulerAnglesHint: {x: 0, y: -45, z: 0}
   m_Children: []
   m_Father: {fileID: 1910893122}
@@ -37195,6 +37217,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1042210518}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1042210524
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1042210518}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1042606957
 GameObject:
   m_ObjectHideFlags: 0
@@ -37253,6 +37290,8 @@ MonoBehaviour:
   Driver: {fileID: 887614258}
   DriverCar: {fileID: 861102573}
   Controller: {fileID: 10466196}
+  IsTimed: 0
+  TimeStopped: 0
 --- !u!1001 &1043492392
 Prefab:
   m_ObjectHideFlags: 0
@@ -48705,7 +48744,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1466087270
 Transform:
   m_ObjectHideFlags: 0
@@ -59368,7 +59407,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowWhenNotFocused: 0
-  m_persistentVersions: aa02000000000000
+  m_persistentVersions: b202000000000000
   m_modes: 0200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000
   m_points:
   - {x: 0, y: 0, z: 0}
@@ -62020,6 +62059,22 @@ MonoBehaviour:
 Transform:
   m_PrefabParentObject: {fileID: 415920, guid: ae4427e80dceffe47b5179ce000667cb, type: 2}
   m_PrefabInternal: {fileID: 1085907930}
+--- !u!1 &1825925087 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 115652, guid: f9ed7f6908b8b4f8c94fc6f99f9ec961, type: 2}
+  m_PrefabInternal: {fileID: 215972590}
+--- !u!64 &1825925091
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1825925087}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_Mesh: {fileID: 4300008, guid: aee1104217d244771bb0e4d8f1f1e4ca, type: 3}
 --- !u!1 &1828397952
 GameObject:
   m_ObjectHideFlags: 0
@@ -67497,7 +67552,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowWhenNotFocused: 0
-  m_persistentVersions: fa02000000000000
+  m_persistentVersions: 0d03000000000000
   m_modes: 020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000
   m_points:
   - {x: -245.5, y: 0, z: 1509.5}
@@ -69959,6 +70014,7 @@ GameObject:
   - 4: {fileID: 2093353218}
   - 65: {fileID: 2093353220}
   - 114: {fileID: 2093353219}
+  - 114: {fileID: 2093353221}
   m_Layer: 0
   m_Name: FireUFO
   m_TagString: Untagged
@@ -70003,6 +70059,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10, y: 10, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2093353221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2093353217}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b04af62ce59c5444e88cb2e292a80ce0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Shield: {fileID: 1042210518}
+  Driver: {fileID: 887614258}
 --- !u!1 &2095272587
 GameObject:
   m_ObjectHideFlags: 0
@@ -72106,7 +72175,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2104769149
 Transform:
   m_ObjectHideFlags: 0

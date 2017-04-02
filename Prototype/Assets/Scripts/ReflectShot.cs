@@ -1,8 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ReflectShot : MonoBehaviour {
-
+public class ReflectShot : MonoBehaviour
+{
+    private int _shotCt = 0;
 	// Use this for initialization
 	void Start () {
 	
@@ -15,9 +16,14 @@ public class ReflectShot : MonoBehaviour {
 
     void OnTriggerEnter(Collider col)
     {
-        if (!(col.gameObject.name.Contains("Fire") || col.gameObject.name.Contains("Ding")))
+        if (col.gameObject.tag == "shot")
         {
-            var x = hideFlags;
+            col.gameObject.GetComponent<ShotBehavior>().Mult = -1;
+            _shotCt++;
+            if (_shotCt % 3 == 0)
+            {
+                gameObject.SetActive(false);
+            }
         }
     }
 }

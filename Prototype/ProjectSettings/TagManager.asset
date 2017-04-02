@@ -13,6 +13,8 @@ TagManager:
   - Fire
   - terrain
   - boulder
+  - shot
+  - ufo
   layers:
   - Default
   - TransparentFX
