@@ -29,7 +29,7 @@ public class StopCar : MonoBehaviour
 	        DriverCar.Speed = 0;
 	        TimeStopped -= Time.deltaTime;
 	    }
-	    if (TimeStopped <= 0)
+	    if (TimeStopped <= 0 && IsTimed)
 	    {
 	        Stop = false;
 	        Continue = true;

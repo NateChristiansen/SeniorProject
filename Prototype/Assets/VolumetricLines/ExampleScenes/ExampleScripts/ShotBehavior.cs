@@ -5,6 +5,7 @@ public class ShotBehavior : MonoBehaviour
 {
     public int Mult = 1;
     private int _ufoct = 0;
+    public UFOHealth UFO;
 
 	// Use this for initialization
 	void Start () {
@@ -23,7 +24,8 @@ public class ShotBehavior : MonoBehaviour
             _ufoct++;
             if (_ufoct == 2)
             {
-                
+                UFO.Health--;
+                if (UFO.Health <= 0) UFO.Activate();
             }
         }
     }
