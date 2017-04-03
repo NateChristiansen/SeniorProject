@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 public class LoadLevel : MonoBehaviour {
 
     private AsyncOperation async;
+    public string Level;
+
     // Use this for initialization
     void Start ()
     {
@@ -18,7 +20,7 @@ public class LoadLevel : MonoBehaviour {
 
     IEnumerator Load()
     {
-        async = SceneManager.LoadSceneAsync("spaceScene");
+        async = SceneManager.LoadSceneAsync(Level);
         async.allowSceneActivation = false;
         yield return async;
     }

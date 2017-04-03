@@ -15,6 +15,7 @@ public class EngageHyperDrive : MonoBehaviour
     private bool _activated = false;
     private float timetostart;
     public TimedObject[] Points;
+    public ParticleSystem BlackHole;
 
     private bool _scale;
 	// Use this for initialization
@@ -27,10 +28,14 @@ public class EngageHyperDrive : MonoBehaviour
 	void Update () {
 	    if (_scale)
 	    {
+	        if (BlackHole != null)
+	        {
+	            float bh_amt = BlackHole.startSize + Time.deltaTime * 200;
+	            BlackHole.startSize = bh_amt >= 200 ? 200 : bh_amt;
+	        }
 	        float amt = ObjectToLoad.localScale.x + Time.deltaTime*.9f*.2f;
 	        if (amt > 1)
 	        {
-	            amt = 1;
 	            _scale = false;
                 ObjectToLoad.localScale = new Vector3(1, 1, 1);
 	        }

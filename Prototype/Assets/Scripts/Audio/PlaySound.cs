@@ -19,7 +19,7 @@ public class PlaySound : MonoBehaviour
     {
         if (col.gameObject.tag == "car")
         {
-            transform.gameObject.GetComponent<AudioSource>().Play();
+            gameObject.GetComponent<AudioSource>().Play();
         }
     }
 }

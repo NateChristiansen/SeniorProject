@@ -16963,6 +16963,48 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_index: 154
+--- !u!1001 &741390245
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4000012692375976, guid: 5db114e7ff37b4948b400ffb69c0b695, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 1248.0172
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012692375976, guid: 5db114e7ff37b4948b400ffb69c0b695, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 258.90894
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012692375976, guid: 5db114e7ff37b4948b400ffb69c0b695, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -752.60266
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012692375976, guid: 5db114e7ff37b4948b400ffb69c0b695, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012692375976, guid: 5db114e7ff37b4948b400ffb69c0b695, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012692375976, guid: 5db114e7ff37b4948b400ffb69c0b695, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012692375976, guid: 5db114e7ff37b4948b400ffb69c0b695, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012692375976, guid: 5db114e7ff37b4948b400ffb69c0b695, type: 2}
+      propertyPath: m_RootOrder
+      value: 17
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 5db114e7ff37b4948b400ffb69c0b695, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &743184013
 GameObject:
   m_ObjectHideFlags: 0
@@ -20535,7 +20577,7 @@ GameObject:
   - 4: {fileID: 902068916}
   - 82: {fileID: 902068915}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: tutorialsong
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30959,7 +31001,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowWhenNotFocused: 0
-  m_persistentVersions: 3e02000000000000
+  m_persistentVersions: 4a02000000000000
   m_modes: 020000000200000002000000020000000200000002000000020000000200000002000000
   m_points:
   - {x: 2096.519, y: 0, z: -298.8}
@@ -37194,7 +37236,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11168296872a96c4881f1fa3dd605c3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Car: {fileID: 0}
+  Car: {fileID: 1752715521}
   Tutorial: {fileID: 1709381582}
 --- !u!65 &1584615395
 BoxCollider:
@@ -44773,7 +44815,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1891974358}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -46782,7 +46824,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowWhenNotFocused: 1
-  m_persistentVersions: 0608000000000000
+  m_persistentVersions: 1208000000000000
   m_modes: 02000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000
   m_points:
   - {x: 0, y: 0, z: 0}

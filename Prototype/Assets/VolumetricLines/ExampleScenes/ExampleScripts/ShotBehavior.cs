@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using System.Collections;
 
 public class ShotBehavior : MonoBehaviour
@@ -27,6 +28,10 @@ public class ShotBehavior : MonoBehaviour
                 UFO.Health--;
                 if (UFO.Health <= 0) UFO.Activate();
             }
+        }
+        if (col.gameObject.tag == "car" || col.gameObject.tag == "ufo")
+        {
+            gameObject.GetComponent<AudioSource>().Play();
         }
     }
 }

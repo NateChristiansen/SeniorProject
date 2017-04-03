@@ -4879,7 +4879,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowWhenNotFocused: 0
-  m_persistentVersions: 4600000000000000
+  m_persistentVersions: 4800000000000000
   m_modes: 0000000000000000
   m_points:
   - {x: 0, y: 0, z: 0}
@@ -4931,7 +4931,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowWhenNotFocused: 0
-  m_persistentVersions: 4600000000000000
+  m_persistentVersions: 4800000000000000
   m_modes: 0000000000000000
   m_points:
   - {x: 0, y: 0, z: 0}
@@ -17999,7 +17999,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowWhenNotFocused: 0
-  m_persistentVersions: 4d00000000000000
+  m_persistentVersions: 4f00000000000000
   m_modes: 0000000000000000
   m_points:
   - {x: 0, y: 0, z: 0}
@@ -20786,7 +20786,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowWhenNotFocused: 0
-  m_persistentVersions: 4600000000000000
+  m_persistentVersions: 4800000000000000
   m_modes: 0000000000000000
   m_points:
   - {x: 0, y: 0, z: 0}
@@ -22099,7 +22099,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowWhenNotFocused: 0
-  m_persistentVersions: 4600000000000000
+  m_persistentVersions: 4800000000000000
   m_modes: 0000000000000000
   m_points:
   - {x: 0, y: 0, z: 0}
@@ -43721,6 +43721,7 @@ MonoBehaviour:
   Offset: 0
   IsRunning: 1
   IsLoop: 1
+  m_t: 0
 --- !u!114 &1526992567
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44531,7 +44532,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowWhenNotFocused: 0
-  m_persistentVersions: 9600000000000000
+  m_persistentVersions: 9800000000000000
   m_modes: 020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000
   m_points:
   - {x: 0, y: 0, z: 0}
@@ -45691,7 +45692,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b132418c7ac9fd4b81bc3048d4cd8b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SceneToLoadOnStart: jungleScene
+  SceneToLoadOnStart: tutorialScene
 --- !u!1001 &1570363789
 Prefab:
   m_ObjectHideFlags: 0

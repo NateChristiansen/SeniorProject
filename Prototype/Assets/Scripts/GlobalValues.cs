@@ -57,6 +57,8 @@ public class GlobalValues : MonoBehaviour
 	    GetInstance();
 	    //LavaOrbAmount = 13;
 	    //LavaScenarioAmount = 3;
+	    SpaceScenarioAmount = 4;
+	    SpaceOrbAmount = 34;
 	}
 	
 	// Update is called once per frame
