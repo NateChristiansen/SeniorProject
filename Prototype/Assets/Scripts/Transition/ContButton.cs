@@ -27,6 +27,11 @@ public class ContButton : MonoBehaviour, IGvrGazeResponder
         SceneManager.LoadScene("lavaScene");
     }
 
+    private void LoadStartScene()
+    {
+        SceneManager.LoadScene("startScene");
+    }
+
     public void OnGazeEnter()
     {
 
@@ -46,6 +51,10 @@ public class ContButton : MonoBehaviour, IGvrGazeResponder
         else if (TransController.CompletedLevel.Equals("lavaScene"))
         {
             LoadSpace();
+        }
+        else if (TransController.CompletedLevel.Equals("spaceScene"))
+        {
+            LoadStartScene();
         }
     }
 }
