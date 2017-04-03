@@ -10,6 +10,8 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/protoScene.unity
   - enabled: 1
+    path: Assets/tutorialScene.unity
+  - enabled: 1
     path: Assets/jungleScene.unity
   - enabled: 1
     path: Assets/transitionScene.unity
