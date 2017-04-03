@@ -29,7 +29,7 @@ public class ShotBehavior : MonoBehaviour
                 if (UFO.Health <= 0) UFO.Activate();
             }
         }
-        if (col.gameObject.tag == "car" || col.gameObject.tag == "ufo")
+        if ((col.gameObject.tag == "car" && Mult != -1) || (col.gameObject.tag == "ufo" && Mult == -1))
         {
             gameObject.GetComponent<AudioSource>().Play();
         }

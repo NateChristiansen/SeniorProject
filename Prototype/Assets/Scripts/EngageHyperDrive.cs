@@ -16,6 +16,7 @@ public class EngageHyperDrive : MonoBehaviour
     private float timetostart;
     public TimedObject[] Points;
     public ParticleSystem BlackHole;
+    public AudioSource Engine;
 
     private bool _scale;
 	// Use this for initialization
@@ -30,8 +31,8 @@ public class EngageHyperDrive : MonoBehaviour
 	    {
 	        if (BlackHole != null)
 	        {
-	            float bh_amt = BlackHole.startSize + Time.deltaTime * 200;
-	            BlackHole.startSize = bh_amt >= 200 ? 200 : bh_amt;
+	            float bh_amt = BlackHole.startSize + Time.deltaTime * 10000;
+	            BlackHole.startSize = bh_amt >= 250 ? 250 : bh_amt;
 	        }
 	        float amt = ObjectToLoad.localScale.x + Time.deltaTime*.9f*.2f;
 	        if (amt > 1)
@@ -80,8 +81,11 @@ public class EngageHyperDrive : MonoBehaviour
 	    if (timetostart > 0)
 	    {
 	        timetostart -= Time.deltaTime;
-            if (timetostart < 0)
+	        if (timetostart <= 0)
+	        {
 	            Driver.Speed = _speed;
+	            Engine.volume = .371f;
+	        }
 	    }
 	}
 
@@ -90,6 +94,7 @@ public class EngageHyperDrive : MonoBehaviour
         if (!_activated && col.gameObject.tag == "car")
         {
             Activate = true;
+            Engine.volume = 1;
             Driver.Speed = 0;
             Particles.Play();
             if (ObjectToDestroy != null)
