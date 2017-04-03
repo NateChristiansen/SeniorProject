@@ -19,3 +19,5 @@ EditorBuildSettings:
     path: Assets/lavaScene.unity
   - enabled: 1
     path: Assets/spaceScene.unity
+  - enabled: 1
+    path: Assets/finalTransition.unity

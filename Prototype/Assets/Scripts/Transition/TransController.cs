@@ -63,20 +63,20 @@ public class TransController : MonoBehaviour
         Material tempMat = Resources.Load("LavaScore", typeof(Material)) as Material;
         ScoreBoard.gameObject.GetComponent<Renderer>().material = tempMat;
 
-        TitleText.color = Color.black;
+        TitleText.color = Color.white;
 
         LevelText.text = "Level: Lava";
-        LevelText.color = Color.black;
+        LevelText.color = Color.white;
 
 
         OrbText.text = "Orbs: " + GlobalValues.GetInstance().GetLavaOrbsCollected() + " / " +
                        GlobalValues.GetInstance().LavaOrbAmount;
-        OrbText.color = Color.black;
+        OrbText.color = Color.white;
 
 
         ScenarioText.text = "Scenarios: " + GlobalValues.GetInstance().GetLavaScenariosCompleted() + " / " +
                             GlobalValues.GetInstance().LavaScenarioAmount;
-        ScenarioText.color = Color.black;
+        ScenarioText.color = Color.white;
     }
 
     private void LoadSpaceData()

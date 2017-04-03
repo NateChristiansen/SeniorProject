@@ -53,12 +53,7 @@ public class GlobalValues : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
-        Debug.Log("ok");
 	    GetInstance();
-	    //LavaOrbAmount = 13;
-	    //LavaScenarioAmount = 3;
-	    SpaceScenarioAmount = 4;
-	    SpaceOrbAmount = 34;
 	}
 	
 	// Update is called once per frame
