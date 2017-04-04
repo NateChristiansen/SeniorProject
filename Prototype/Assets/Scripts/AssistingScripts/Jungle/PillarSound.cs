@@ -1,10 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class BoulderSound : MonoBehaviour {
-	
-	public AudioSource terrainSound;
+public class PillarSound : MonoBehaviour {
+
 	public AudioSource carSound;
+	public AudioSource hitSound;
 	// Use this for initialization
 	void Start () {
 
@@ -20,9 +20,18 @@ public class BoulderSound : MonoBehaviour {
 
 		if (col.gameObject.tag.Equals("car"))
 		{
-			terrainSound.Play();
 			carSound.Play();
 		}
+
+
 	}
 
+	void OnTriggerEnter(Collider col)
+	{
+		if (col.gameObject.tag.Equals ("groundtrigger"))
+		{
+			PillarRotate._rotate = false;
+			hitSound.Play();
+		}
+	}
 }
