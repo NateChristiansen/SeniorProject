@@ -3,7 +3,6 @@ using System.Collections;
 
 public class TransController : MonoBehaviour
 {
-    public TextMesh TitleText;
     public TextMesh LevelText;
     public TextMesh OrbText;
     public TextMesh ScenarioText;
@@ -42,9 +41,7 @@ public class TransController : MonoBehaviour
         Material tempMat = Resources.Load("JungleScore", typeof (Material)) as Material;
         ScoreBoard.gameObject.GetComponent<Renderer>().material = tempMat;
 
-        TitleText.color = Color.white;
-
-        LevelText.text = "Level: Jungle";
+        LevelText.text = "Jungle";
         LevelText.color = Color.white;
 
 
@@ -63,9 +60,7 @@ public class TransController : MonoBehaviour
         Material tempMat = Resources.Load("LavaScore", typeof(Material)) as Material;
         ScoreBoard.gameObject.GetComponent<Renderer>().material = tempMat;
 
-        TitleText.color = Color.white;
-
-        LevelText.text = "Level: Lava";
+        LevelText.text = "Lava";
         LevelText.color = Color.white;
 
 
@@ -84,9 +79,7 @@ public class TransController : MonoBehaviour
         Material tempMat = Resources.Load("SpaceScore", typeof(Material)) as Material;
         ScoreBoard.gameObject.GetComponent<Renderer>().material = tempMat;
 
-        TitleText.color = Color.white;
-
-        LevelText.text = "Level: Space";
+        LevelText.text = "Space";
         LevelText.color = Color.white;
 
 
