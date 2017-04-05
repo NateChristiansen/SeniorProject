@@ -20,6 +20,7 @@ public class FinalTransSetup : MonoBehaviour
     {
         if (col.gameObject.tag.Equals("car"))
         {
+            TransController.CompletedLevel = "spaceScene";
             SceneManager.LoadScene("finalTransition");
         }
     }
