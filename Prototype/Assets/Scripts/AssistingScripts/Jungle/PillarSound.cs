@@ -21,6 +21,7 @@ public class PillarSound : MonoBehaviour {
 		if (col.gameObject.tag.Equals("car"))
 		{
 			carSound.Play();
+			Destroy(this);
 		}
 
 
