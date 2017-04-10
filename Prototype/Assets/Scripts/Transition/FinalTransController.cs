@@ -20,6 +20,7 @@ public class FinalTransController : MonoBehaviour
 	// Use this for initialization
 	void Start () 
     {
+
 	    LoadJungleData();
         LoadLavaData();
         LoadSpaceData();
@@ -30,6 +31,7 @@ public class FinalTransController : MonoBehaviour
 	void Update () {
 	
 	}
+
 
     private void LoadJungleData()
     {

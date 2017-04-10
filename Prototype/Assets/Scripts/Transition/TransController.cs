@@ -11,8 +11,9 @@ public class TransController : MonoBehaviour
 
     public static string CompletedLevel;
 	// Use this for initialization
-	void Start () 
-    {
+	void Start ()
+	{
+
         Debug.Log(CompletedLevel);
 	    if (CompletedLevel.Equals("jungleScene"))
 	    {
@@ -34,6 +35,7 @@ public class TransController : MonoBehaviour
     {
 	
 	}
+
 
     private void LoadJungleData()
     {

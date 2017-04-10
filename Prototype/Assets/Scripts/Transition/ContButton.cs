@@ -4,7 +4,8 @@ using UnityEngine.SceneManagement;
 
 public class ContButton : MonoBehaviour, IGvrGazeResponder
 {
-
+    public GameObject LoadScreen;
+    public GameObject ScoreBoard;
 	// Use this for initialization
 	void Start () 
     {
@@ -42,8 +43,16 @@ public class ContButton : MonoBehaviour, IGvrGazeResponder
         
     }
 
+    private void DisableScoreboard()
+    {
+        
+    }
+
     public void OnGazeTrigger()
     {
+        ScoreBoard.SetActive(false);
+        LoadScreen.SetActive(true);
+
         if (TransController.CompletedLevel.Equals("jungleScene"))
         {
             LoadLava();
