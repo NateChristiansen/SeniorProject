@@ -43,11 +43,6 @@ public class ContButton : MonoBehaviour, IGvrGazeResponder
         
     }
 
-    private void DisableScoreboard()
-    {
-        
-    }
-
     public void OnGazeTrigger()
     {
         ScoreBoard.SetActive(false);
