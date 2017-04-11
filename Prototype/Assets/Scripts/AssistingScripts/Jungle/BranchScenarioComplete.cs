@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class GetScenario : MonoBehaviour {
+public class BranchScenarioComplete : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
