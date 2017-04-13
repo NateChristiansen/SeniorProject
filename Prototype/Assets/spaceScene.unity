@@ -2410,7 +2410,7 @@ GameObject:
   - 82: {fileID: 108150826}
   m_Layer: 0
   m_Name: Vehicle
-  m_TagString: Untagged
+  m_TagString: car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2904,7 +2904,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowWhenNotFocused: 1
-  m_persistentVersions: 5606000000000000
+  m_persistentVersions: 5f06000000000000
   m_modes: 0200000002000000020000000200000002000000020000000200000002000000
   m_points:
   - {x: 0, y: 0, z: 0}
@@ -7029,7 +7029,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 299712866}
   m_LocalRotation: {x: -0, y: 0.17364816, z: -0, w: 0.9848078}
-  m_LocalPosition: {x: 13.3, y: 10.9, z: 23.5}
+  m_LocalPosition: {x: 13.3, y: 10.9, z: 27.36}
   m_LocalScale: {x: 1.3, y: 1.3, z: 1.3}
   m_LocalEulerAnglesHint: {x: 0, y: 20, z: 0}
   m_Children: []
@@ -16133,7 +16133,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 513637373}
   m_LocalRotation: {x: 0, y: 0.17364816, z: 0, w: 0.9848078}
-  m_LocalPosition: {x: 6.3, y: 7.35, z: 25.5}
+  m_LocalPosition: {x: 6.3, y: 7.35, z: 29.36}
   m_LocalScale: {x: 1.3, y: 1.3, z: 1.3}
   m_LocalEulerAnglesHint: {x: 0, y: 20, z: 0}
   m_Children: []
@@ -20450,7 +20450,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowWhenNotFocused: 1
-  m_persistentVersions: 5402000000000000
+  m_persistentVersions: 5602000000000000
   m_modes: 0200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000
   m_points:
   - {x: 26.31, y: 15.78, z: 0}
@@ -44008,6 +44008,7 @@ GameObject:
   - 65: {fileID: 1012795623}
   - 114: {fileID: 1012795622}
   - 114: {fileID: 1012795621}
+  - 114: {fileID: 1012795624}
   m_Layer: 0
   m_Name: FireUFO (5)
   m_TagString: Untagged
@@ -44065,6 +44066,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10, y: 10, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1012795624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1012795619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7f19c8b98b10f246afde2727279b6ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Driver: {fileID: 887614258}
+  Direction: 0
 --- !u!1 &1012815746
 GameObject:
   m_ObjectHideFlags: 0
@@ -45073,6 +45087,7 @@ GameObject:
   - 65: {fileID: 1042606958}
   - 114: {fileID: 1042606960}
   - 114: {fileID: 1042606961}
+  - 114: {fileID: 1042606962}
   m_Layer: 0
   m_Name: StopPoint
   m_TagString: Untagged
@@ -45134,7 +45149,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7f19c8b98b10f246afde2727279b6ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Driver: {fileID: 0}
+  Driver: {fileID: 887614258}
+  Direction: 0
+--- !u!114 &1042606962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1042606957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7f19c8b98b10f246afde2727279b6ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Driver: {fileID: 887614258}
+  Direction: 0
 --- !u!1001 &1043492392
 Prefab:
   m_ObjectHideFlags: 0
@@ -49133,7 +49162,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1159895019}
   m_LocalRotation: {x: -0, y: 0.17364816, z: -0, w: 0.9848078}
-  m_LocalPosition: {x: 13.3, y: 2.59, z: 23.5}
+  m_LocalPosition: {x: 13.3, y: 2.59, z: 27.36}
   m_LocalScale: {x: 1.3, y: 1.3, z: 1.3}
   m_LocalEulerAnglesHint: {x: 0, y: 20, z: 0}
   m_Children: []
@@ -55502,6 +55531,7 @@ GameObject:
   - 4: {fileID: 1412924168}
   - 65: {fileID: 1412924169}
   - 114: {fileID: 1412924170}
+  - 114: {fileID: 1412924171}
   m_Layer: 0
   m_Name: DodgeAsteroidTrigger
   m_TagString: Untagged
@@ -55546,6 +55576,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CarPath: {fileID: 861102573}
+  Driver: {fileID: 887614258}
+  Direction: 0
+--- !u!114 &1412924171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1412924167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7f19c8b98b10f246afde2727279b6ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   Driver: {fileID: 887614258}
   Direction: 0
 --- !u!1 &1414744506
@@ -66071,7 +66114,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1683918390}
   m_LocalRotation: {x: -0, y: 0.17364816, z: -0, w: 0.9848078}
-  m_LocalPosition: {x: 19, y: 6.5, z: 22.5}
+  m_LocalPosition: {x: 19, y: 6.5, z: 26.36}
   m_LocalScale: {x: 1.3, y: 1.3, z: 1.3}
   m_LocalEulerAnglesHint: {x: 0, y: 20, z: 0}
   m_Children: []
@@ -70761,7 +70804,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowWhenNotFocused: 0
-  m_persistentVersions: f802000000000000
+  m_persistentVersions: 0103000000000000
   m_modes: 0200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000
   m_points:
   - {x: 0, y: 0, z: 0}
@@ -79809,7 +79852,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowWhenNotFocused: 0
-  m_persistentVersions: 7603000000000000
+  m_persistentVersions: 7f03000000000000
   m_modes: 020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000
   m_points:
   - {x: -245.5, y: 0, z: 1509.5}
@@ -82272,6 +82315,7 @@ GameObject:
   - 65: {fileID: 2093353220}
   - 114: {fileID: 2093353219}
   - 114: {fileID: 2093353221}
+  - 114: {fileID: 2093353222}
   m_Layer: 0
   m_Name: FireUFO
   m_TagString: Untagged
@@ -82329,6 +82373,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Shield: {fileID: 1042210518}
   Driver: {fileID: 887614258}
+--- !u!114 &2093353222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2093353217}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7f19c8b98b10f246afde2727279b6ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Driver: {fileID: 887614258}
+  Direction: 0
 --- !u!1 &2095272587
 GameObject:
   m_ObjectHideFlags: 0

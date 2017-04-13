@@ -95,7 +95,7 @@ public class EngageHyperDrive : MonoBehaviour
         {
             Activate = true;
             Engine.volume = 1;
-            Driver.Speed = 0;
+            Driver.Speed = 1;
             Particles.Play();
             if (ObjectToDestroy != null)
                 Destroy(ObjectToDestroy.gameObject);

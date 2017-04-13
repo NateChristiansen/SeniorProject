@@ -18,7 +18,7 @@ public class TutorialText : MonoBehaviour, IGvrGazeResponder
     public void OnEnable()
     {
         _initialSpeed = Car.Speed;
-        Car.Speed = 0;
+        Car.Speed = 1;
     }
 
     public void OnGazeEnter()

@@ -4,6 +4,7 @@ using System.Collections;
 public class ScenarioDecider : MonoBehaviour
 {
     public RG_IKDriver Driver;
+    public RG_IKDriver.LookState Direction;
 	// Use this for initialization
 	void Start () {
 	
@@ -16,7 +17,7 @@ public class ScenarioDecider : MonoBehaviour
 
     void OnTriggerEnter(Collider col)
     {
-        if (col.gameObject.tag == "car")
+        if (col.gameObject.tag == "car" && Direction == Driver.LookTarget)
         {
             GlobalValues.GetInstance().AddToScenarioCompletionTotal();
         }
