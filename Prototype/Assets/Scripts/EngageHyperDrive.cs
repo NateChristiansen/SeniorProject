@@ -14,7 +14,6 @@ public class EngageHyperDrive : MonoBehaviour
     private float _speed;
     private bool _activated = false;
     private float timetostart;
-    public TimedObject[] Points;
     public ParticleSystem BlackHole;
     public AudioSource Engine;
 
@@ -56,26 +55,6 @@ public class EngageHyperDrive : MonoBehaviour
                 if (ObjectToLoad != null) ObjectToLoad.gameObject.SetActive(true);
 	            _scale = true;
 	            timetostart = 2;
-            }
-            if (TimeToWait < 7 && !Points[0].IsStarted)
-            {
-                Points[0].gameObject.SetActive(true);
-                Points[0].IsStarted = true;
-            }
-            if (TimeToWait < 6.5 && !Points[1].IsStarted)
-            {
-                Points[1].gameObject.SetActive(true);
-                Points[1].IsStarted = true;
-            }
-            if (TimeToWait < 6 && !Points[2].IsStarted)
-            {
-                Points[2].gameObject.SetActive(true);
-                Points[2].IsStarted = true;
-            }
-            if (TimeToWait < 5.5 && !Points[3].IsStarted)
-            {
-                Points[3].gameObject.SetActive(true);
-                Points[3].IsStarted = true;
             }
         }
 	    if (timetostart > 0)
