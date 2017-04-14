@@ -23,7 +23,7 @@ public class TimedStop : MonoBehaviour {
         if (Stop)
         {
             WaitTime -= Time.deltaTime; // count down
-            DriverCar.Speed = 0;
+            DriverCar.Speed = 1;
         }
 
         if (WaitTime <= 0 && Stop)
