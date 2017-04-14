@@ -20,6 +20,7 @@ public class ActivateShield : MonoBehaviour
     {
         if (col.gameObject.tag == "car" && Driver.LookTarget == RG_IKDriver.LookState.Straight)
         {
+            Shield.SetActive(false);
             Shield.SetActive(true);
         }
     }
