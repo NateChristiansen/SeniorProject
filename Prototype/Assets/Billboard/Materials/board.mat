@@ -24,7 +24,7 @@ Material:
     m_Floats:
     - first:
         name: _Shininess
-      second: 0.14709711
+      second: 0.183
     m_Colors:
     - first:
         name: _Color
