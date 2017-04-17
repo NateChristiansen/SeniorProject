@@ -4659,7 +4659,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowWhenNotFocused: 0
-  m_persistentVersions: 6900000000000000
+  m_persistentVersions: 6c00000000000000
   m_modes: 0000000000000000
   m_points:
   - {x: 0, y: 0, z: 0}
@@ -4711,7 +4711,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowWhenNotFocused: 0
-  m_persistentVersions: 6900000000000000
+  m_persistentVersions: 6c00000000000000
   m_modes: 0000000000000000
   m_points:
   - {x: 0, y: 0, z: 0}
@@ -11349,7 +11349,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   JungleOrbAmount: 25
   LavaOrbAmount: 13
-  SpaceOrbAmount: 29
+  SpaceOrbAmount: 30
   JungleScenarioAmount: 3
   LavaScenarioAmount: 3
   SpaceScenarioAmount: 4
@@ -16254,7 +16254,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowWhenNotFocused: 0
-  m_persistentVersions: 7000000000000000
+  m_persistentVersions: 7300000000000000
   m_modes: 0000000000000000
   m_points:
   - {x: 0, y: 0, z: 0}
@@ -18858,7 +18858,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowWhenNotFocused: 0
-  m_persistentVersions: 6900000000000000
+  m_persistentVersions: 6c00000000000000
   m_modes: 0000000000000000
   m_points:
   - {x: 0, y: 0, z: 0}
@@ -20101,7 +20101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowWhenNotFocused: 0
-  m_persistentVersions: 6900000000000000
+  m_persistentVersions: 6c00000000000000
   m_modes: 0000000000000000
   m_points:
   - {x: 0, y: 0, z: 0}
@@ -40981,7 +40981,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowWhenNotFocused: 0
-  m_persistentVersions: b900000000000000
+  m_persistentVersions: bc00000000000000
   m_modes: 020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000
   m_points:
   - {x: 0, y: 0, z: 0}
