@@ -15,7 +15,7 @@ public class ShotBehavior : MonoBehaviour
 	
 	// Update is called once per frame
 	void Update () {
-		transform.position += transform.forward * Time.deltaTime * 700f * Mult;
+		transform.position += transform.forward * Time.deltaTime * 500f * Mult;
 	}
 
     void OnTriggerEnter(Collider col)
