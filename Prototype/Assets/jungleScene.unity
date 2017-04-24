@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.43849942, g: 0.48655474, b: 0.5667656, a: 1}
+  m_IndirectSpecularColor: {r: 0.4453829, g: 0.49500322, b: 0.5739983, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -18181,7 +18181,7 @@ Terrain:
   serializedVersion: 3
   m_TerrainData: {fileID: 15600000, guid: 15374f778e92a7c4580eae24d83ac70c, type: 2}
   m_TreeDistance: 2000
-  m_TreeBillboardDistance: 604
+  m_TreeBillboardDistance: 1216
   m_TreeCrossFadeLength: 0
   m_TreeMaximumFullLODCount: 50
   m_DetailObjectDistance: 250
@@ -22087,7 +22087,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowWhenNotFocused: 1
-  m_persistentVersions: 2518000000000000
+  m_persistentVersions: 2f18000000000000
   m_modes: 0200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000
   m_points:
   - {x: 0, y: 0, z: 0}
@@ -26601,7 +26601,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowWhenNotFocused: 0
-  m_persistentVersions: c802000000000000
+  m_persistentVersions: d202000000000000
   m_modes: 0200000002000000020000000200000002000000020000000200000002000000
   m_points:
   - {x: 5173, y: 0, z: -474}
@@ -43656,7 +43656,7 @@ Light:
   serializedVersion: 7
   m_Type: 1
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 1.59
+  m_Intensity: 1.48
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -43686,10 +43686,10 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1347588852}
-  m_LocalRotation: {x: 0.5116644, y: -0.32136378, z: -0.04069861, w: 0.79578173}
-  m_LocalPosition: {x: 7226, y: 3391, z: -643}
+  m_LocalRotation: {x: 0.37804234, y: 0.7251201, z: -0.56278706, w: 0.12064637}
+  m_LocalPosition: {x: 7189.6, y: 3094, z: 1720}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 52.009003, y: -64.131004, z: -40.015003}
+  m_LocalEulerAnglesHint: {x: 65.128006, y: -143.154, z: -280.8}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -53541,6 +53541,59 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.14145869, y: -0.9866111, z: 0.09519046}
     m_Extent: {x: 0.104255766, y: 0.11181876, z: 0.20991403}
   m_DirtyAABB: 0
+--- !u!1 &1490144421
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1490144423}
+  - 65: {fileID: 1490144422}
+  - 114: {fileID: 1490144424}
+  m_Layer: 0
+  m_Name: TerrainTestTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1490144422
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1490144421}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &1490144423
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1490144421}
+  m_LocalRotation: {x: -0, y: -0.023422537, z: -0, w: -0.9997257}
+  m_LocalPosition: {x: 527.1, y: 36.01953, z: 1646}
+  m_LocalScale: {x: 0, y: 75, z: 300.9828}
+  m_LocalEulerAnglesHint: {x: 0, y: 362.606, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 27
+--- !u!114 &1490144424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1490144421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdf1f5c68bc5dc44786d4f2560ccbdfa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1495493608
 Prefab:
   m_ObjectHideFlags: 0
